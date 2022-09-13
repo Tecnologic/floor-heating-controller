@@ -127,39 +127,6 @@ cover:
       - switch.turn_off: CH6_IB_pin
     max_duration : 55s
     id: CH6_cover    
-  - platform: endstop
-    name: ${ch7_cover_name}
-    open_action:
-      - switch.turn_on: CH7_IB_pin
-      - switch.turn_off: CH7_IA_pin
-    open_duration: 40s #39s
-    open_endstop: BEMF_7_sensor
-    close_action:
-      - switch.turn_on: CH7_IA_pin
-      - switch.turn_off: CH7_IB_pin
-    close_duration: 50s #49s
-    close_endstop: BEMF_7_sensor
-    stop_action:
-      - switch.turn_off: CH7_IA_pin
-      - switch.turn_off: CH7_IB_pin
-    max_duration : 55s
-    id: CH7_cover    
-  - platform: endstop
-    name: ${ch8_cover_name}
-    open_action:
-      - switch.turn_on: CH8_IB_pin
-      - switch.turn_off: CH8_IA_pin
-    open_duration: 40s #39s
-    open_endstop: BEMF_8_sensor
-    close_action:
-      - switch.turn_on: CH8_IA_pin
-      - switch.turn_off: CH8_IB_pin
-    close_duration: 50s #49s
-    close_endstop: BEMF_8_sensor
-    stop_action:
-      - switch.turn_off: CH8_IA_pin
-      - switch.turn_off: CH8_IB_pin
-    max_duration : 55s
-    id: CH8_cover
+
 
     

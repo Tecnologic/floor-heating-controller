@@ -13,19 +13,15 @@ time:
 
 
 interval:
-  - interval: 15min
+  - interval: 12min
     then:
       - script.execute: TH1_check
-      - script.execute: TH5_check
-  - interval: 17min
-    then:
       - script.execute: TH2_check
-      - script.execute: TH6_check
-  - interval: 19min
+  - interval: 15min
     then:
       - script.execute: TH3_check
-      - script.execute: TH7_check
-  - interval: 21min
+      - script.execute: TH5_check
+  - interval: 18min
     then:
       - script.execute: TH4_check
-      - script.execute: TH8_check
+      - script.execute: TH6_check

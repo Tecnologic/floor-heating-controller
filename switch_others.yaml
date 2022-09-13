@@ -42,14 +42,5 @@ switch:
     name: "Run ${ch6_thermostat_name} check"
     turn_on_action:
       - script.execute: TH6_check   
-
-  - platform: template
-    name: "Run ${ch7_thermostat_name} check"
-    turn_on_action:
-      - script.execute: TH7_check   
-
-  - platform: template
-    name: "Run ${ch8_thermostat_name} check"
-    turn_on_action:
-      - script.execute: TH8_check         
+     
  
