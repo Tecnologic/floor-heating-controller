@@ -1,40 +1,33 @@
 dallas:
   - pin: 23
 
-
 sensor:
   - platform: dallas
-    #address: 0x1c0000031edd2a28
-    index: 0
+    address: 0x1c0000031edd2a28
     name: "Flur Rücklauf Temperatur"
     id: "flur_return_temperature_sensor"
     
   - platform: dallas
-    #address: 0x1c0000031edd2a28
-    index: 1
+    address: 0x1c0000031edd2a28
     name: "Gäste WC Rücklauf Temperatur"
     id: "wc_eg_return_temperature_sensor"    
 
   - platform: dallas
-    #address: 0x1c0000031edd2a28
-    index: 2
+    address: 0x1c0000031edd2a28
     name: "WoZi 1 Rücklauf Temperatur"
     id: "wozi1_return_temperature_sensor"    
 
   - platform: dallas
-    #address: 0x1c0000031edd2a28
-    index: 3
+    address: 0x1c0000031edd2a28
     name: "WoZi 2 Rücklauf Temperatur"
     id: "wozi2_return_temperature_sensor" 
     
   - platform: dallas
-    #address: 0x1c0000031edd2a28
-    index: 4
+    address: 0x1c0000031edd2a28
     name: "Küche Rücklauf Temperatur"
     id: "kitchen_return_temperature_sensor"
 
   - platform: dallas
-    #address: 0x1c0000031edd2a28
-    index: 5
-    name: "HWR Rücklauf Temperatur"
-    id: "hwr_return_temperature_sensor"
+    address: 0x1c0000031edd2a28
+    name: "Vorlauf Temperatur"
+    id: "heat_temperature_sensor"

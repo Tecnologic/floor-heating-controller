@@ -124,12 +124,7 @@ script:
          - lambda: |-
                 if (id(${ch5_thermostat_name}_thermostat).mode == CLIMATE_MODE_OFF) {return;}
                 ESP_LOGD("main", "TH5_check triggered");
-                // check if any others actuator is running. If yes, stop action and return. 
-                if (id(CH6_cover).current_operation != COVER_OPERATION_IDLE) {
-                       ESP_LOGD("main", "CH6 running cause CH5 cancel operation");
-                       return;
-                } 
-                
+                         
                 float target_position = ${ch5_thermostat_position_formula}
                 
                 //normalize
@@ -143,33 +138,6 @@ script:
                     call.set_position(target_position);
                     call.perform();
                     ESP_LOGD("main", "Adjustment done for CH5 set to position %f", target_position);
-                }      
-
-
-  - id: TH6_check
-    then:
-         - lambda: |-
-                if (id(${ch6_thermostat_name}_thermostat).mode == CLIMATE_MODE_OFF) {return;}
-                ESP_LOGD("main", "TH6_check triggered");
-                // check if any others actuator is running. If yes, stop action and return. 
-                if (id(CH5_cover).current_operation != COVER_OPERATION_IDLE) {
-                       ESP_LOGD("main", "CH5 running cause CH6 cancel operation");
-                       return;
-                } 
-                
-                float target_position = ${ch6_thermostat_position_formula}
-                
-                //normalize
-                if (target_position >1) { target_position = 1;} 
-                if (target_position <0) { target_position = 0;} 
-                
-                
-                //call movement if target_position change consequently
-                if (abs(id(CH6_cover).position - target_position) > id(min_movement).state/100) {
-                    auto call = id(CH6_cover).make_call();
-                    call.set_position(target_position);
-                    call.perform();
-                    ESP_LOGD("main", "Adjustment done for CH6 set to position %f", target_position);
                 }      
 
 

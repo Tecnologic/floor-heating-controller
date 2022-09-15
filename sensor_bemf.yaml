@@ -169,35 +169,3 @@ binary_sensor:
                     id(CH5_cover).publish_state();
                 }
 
-  - platform: template
-    id: BEMF_6_sensor
-    name: "BEMF CH6 sensor"
-    lambda: return ((id(BEMF_5_6_sensor_ADC).state >= id(bemf_trigger_6).state));
-    on_press:
-      then: 
-         - lambda: |-
-                if (id(CH6_cover).current_operation == COVER_OPERATION_OPENING) {
-                    auto call = id(CH6_cover).make_call();
-                    call.set_command_stop();
-                    call.perform();
-                    ESP_LOGD("main", "CH6 opening endstop reached at %f V", id(BEMF_5_6_sensor_ADC).state);
-                    //Rollback
-                    //auto call2 = id(CH6_cover).make_call();
-                    //call2.set_position(id(CH6_cover).position -id(rollback).state/100);
-                    //call2.perform();
-                    //ESP_LOGD("main", "Rollback CH6 -%f %% to remove strenght", id(rollback).state);
-                    id(CH6_cover).position  = 1; //1.0 = 100% = OPEN
-                    id(CH6_cover).publish_state();
-                } else if (id(CH6_cover).current_operation == COVER_OPERATION_CLOSING) {
-                    auto call = id(CH6_cover).make_call();
-                    call.set_command_stop();
-                    call.perform();
-                    ESP_LOGD("main", "CH6 closing endstop reached at %f V", id(BEMF_5_6_sensor_ADC).state);
-                    //Rollback
-                    //auto call2 = id(CH6_cover).make_call();
-                    //call2.set_position(id(CH6_cover).position +id(rollback).state/100);
-                    //call2.perform();
-                    //ESP_LOGD("main", "Rollback CH6 +%f %% to remove strenght", id(rollback).state);
-                    id(CH6_cover).position  = 0;
-                    id(CH6_cover).publish_state();
-                }

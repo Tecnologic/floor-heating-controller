@@ -110,23 +110,7 @@ cover:
       - switch.turn_off: CH5_IB_pin
     max_duration : 55s
     id: CH5_cover
-  - platform: endstop
-    name: ${ch6_cover_name}
-    open_action:
-      - switch.turn_on: CH6_IB_pin
-      - switch.turn_off: CH6_IA_pin
-    open_duration: 40s #39s
-    open_endstop: BEMF_6_sensor
-    close_action:
-      - switch.turn_on: CH6_IA_pin
-      - switch.turn_off: CH6_IB_pin
-    close_duration: 50s #49s
-    close_endstop: BEMF_6_sensor
-    stop_action:
-      - switch.turn_off: CH6_IA_pin
-      - switch.turn_off: CH6_IB_pin
-    max_duration : 55s
-    id: CH6_cover    
+ 
 
 
     

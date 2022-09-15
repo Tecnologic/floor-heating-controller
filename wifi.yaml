@@ -16,5 +16,8 @@ wifi:
     ssid: "floor heating eg flbck"
     password: !secret fallback_hotspot_password
 
+ota:
+  password: "12345678"      
+
 captive_portal:
 

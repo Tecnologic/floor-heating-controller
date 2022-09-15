@@ -104,14 +104,12 @@ substitutions:
   ch3_cover_name: CH3
   ch4_cover_name: CH4
   ch5_cover_name: CH5
-  ch6_cover_name: CH6
   
-  ch1_bemf_trigger: "0.30"
-  ch2_bemf_trigger: "0.35"
-  ch3_bemf_trigger: "0.30"
-  ch4_bemf_trigger: "0.30"
+  ch1_bemf_trigger: "0.25"
+  ch2_bemf_trigger: "0.25"
+  ch3_bemf_trigger: "0.25"
+  ch4_bemf_trigger: "0.25"
   ch5_bemf_trigger: "0.25"
-  ch6_bemf_trigger: "0.25"
 
 
 packages:
@@ -130,7 +128,6 @@ packages:
   sensor_temperature: !include sensor_temperature.yaml
   sensor_others: !include sensor_others.yaml
   
-    
-# web_server:
-  # port: 80    
+web_server:
+  port: 80    
 

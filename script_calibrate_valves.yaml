@@ -66,20 +66,6 @@ script:
       - cover.close: CH5_cover
       - delay: 50s
       - cover.stop: CH5_cover
-         
- 
-  - id: calibrate_CH6_cover
-    then:
-      - logger.log: "Calibrate CH6_cover"
-      - cover.close: CH6_cover
-      - delay: 2s
-      - cover.stop: CH6_cover
-      - cover.open: CH6_cover
-      - delay: 50s
-      - cover.stop: CH6_cover
-      - cover.close: CH6_cover
-      - delay: 50s
-      - cover.stop: CH6_cover
 
 
   - id: valve_maintenance
@@ -90,5 +76,4 @@ script:
       - delay: 120s
       - script.execute: calibrate_CH2_cover
       - script.execute: calibrate_CH4_cover
-      - script.execute: calibrate_CH6_cover
       
