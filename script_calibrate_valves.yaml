@@ -71,9 +71,12 @@ script:
   - id: valve_maintenance
     then:
       - script.execute: calibrate_CH1_cover
+      - delay: 20s
       - script.execute: calibrate_CH3_cover
+      - delay: 20s
       - script.execute: calibrate_CH5_cover
-      - delay: 120s
+      - delay: 20s
       - script.execute: calibrate_CH2_cover
+      - delay: 20s
       - script.execute: calibrate_CH4_cover
       

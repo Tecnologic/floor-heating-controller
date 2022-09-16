@@ -30,12 +30,12 @@ cover:
     open_action:
       - switch.turn_on: CH1_IB_pin
       - switch.turn_off: CH1_IA_pin
-    open_duration: 40s #39s
+    open_duration: 40s
     open_endstop: BEMF_1_sensor
     close_action:
       - switch.turn_on: CH1_IA_pin
       - switch.turn_off: CH1_IB_pin
-    close_duration: 50s #49s
+    close_duration: 50s
     close_endstop: BEMF_1_sensor
     stop_action:
       - switch.turn_off: CH1_IA_pin

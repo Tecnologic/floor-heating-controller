@@ -36,16 +36,12 @@ logger:
     text_sensor : ERROR
     homeassistant.sensor: ERROR
 
-### debug mode :
-# logger:
-  # level: VERY_VERBOSE #NONE# ERROR #INFO #DEBUG  #VERBOSE
-
 # Enable Home Assistant API
 api:
   reboot_timeout: 15min
       
-
 ota:
+    password: "12345678"    
 
 
 # SN74HC595 I/O Expander (shift register) to control L9110s chips

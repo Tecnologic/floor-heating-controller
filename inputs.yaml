@@ -5,9 +5,9 @@ number:
   - platform: template
     name: "bemf_trigger_1"
     optimistic: true
-    min_value: 0.05
-    max_value: 150.00
-    step: 0.05
+    min_value: 0.01
+    max_value: 0.50
+    step: 0.01
     restore_value: true
     initial_value: ${ch1_bemf_trigger}
     id: bemf_trigger_1
@@ -15,9 +15,9 @@ number:
   - platform: template
     name: "bemf_trigger_2"
     optimistic: true
-    min_value: 0.05
-    max_value: 150.00
-    step: 0.05
+    min_value: 0.01
+    max_value: 0.50
+    step: 0.01
     restore_value: true
     initial_value: ${ch2_bemf_trigger}
     id: bemf_trigger_2
@@ -25,9 +25,9 @@ number:
   - platform: template
     name: "bemf_trigger_3"
     optimistic: true
-    min_value: 0.05
-    max_value: 150.00
-    step: 0.05
+    min_value: 0.01
+    max_value: 0.50
+    step: 0.01
     restore_value: true
     initial_value: ${ch3_bemf_trigger}
     id: bemf_trigger_3
@@ -35,9 +35,9 @@ number:
   - platform: template
     name: "bemf_trigger_4"
     optimistic: true
-    min_value: 0.05
-    max_value: 150.00
-    step: 0.05
+    min_value: 0.01
+    max_value: 0.50
+    step: 0.01
     restore_value: true
     initial_value: ${ch4_bemf_trigger}
     id: bemf_trigger_4
@@ -45,9 +45,9 @@ number:
   - platform: template
     name: "bemf_trigger_5"
     optimistic: true
-    min_value: 0.05
-    max_value: 150.00
-    step: 0.05
+    min_value: 0.01
+    max_value: 0.50
+    step: 0.01
     restore_value: true
     initial_value: ${ch5_bemf_trigger}
     id: bemf_trigger_5

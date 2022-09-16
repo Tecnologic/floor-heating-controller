@@ -88,12 +88,6 @@ substitutions:
   ch5_thermostat_position_formula: "round(((((id(${ch5_thermostat_name}_thermostat).target_temperature_high + id(${ch5_thermostat_name}_thermostat).target_temperature_low)/2 - id(${ch5_thermostat_name}_thermostat).current_temperature)+1)/2)/0.1)*0.1;"
   ch5_default_target_temperature_low: 20 °C
   ch5_default_target_temperature_high: 22 °C
-
-  ch6_thermostat_name: hwr
-  ch6_thermostat_sensor: hwr_return_temperature_sensor
-  ch6_thermostat_position_formula: "round(((((id(${ch6_thermostat_name}_thermostat).target_temperature_high + id(${ch6_thermostat_name}_thermostat).target_temperature_low)/2 - id(${ch6_thermostat_name}_thermostat).current_temperature)+1)/2)/0.1)*0.1;"
-  ch6_default_target_temperature_low: 18 °C
-  ch6_default_target_temperature_high: 20 °C
   
   TZ: "Europe/Berlin" #timezone
   
@@ -105,11 +99,11 @@ substitutions:
   ch4_cover_name: CH4
   ch5_cover_name: CH5
   
-  ch1_bemf_trigger: "0.25"
-  ch2_bemf_trigger: "0.25"
-  ch3_bemf_trigger: "0.25"
-  ch4_bemf_trigger: "0.25"
-  ch5_bemf_trigger: "0.25"
+  ch1_bemf_trigger: "0.10"
+  ch2_bemf_trigger: "0.10"
+  ch3_bemf_trigger: "0.10"
+  ch4_bemf_trigger: "0.10"
+  ch5_bemf_trigger: "0.10"
 
 
 packages:
