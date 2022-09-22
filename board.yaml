@@ -1,10 +1,5 @@
 esphome:
   name: ${name}
-  on_boot:
-    priority: -200
-    then:
-        - delay: 1min
-        - script.execute: valve_maintenance
 
   project:
     name: "nliaudat.floor-heating-controller"
@@ -26,12 +21,13 @@ logger:
   level: DEBUG #NONE# ERROR #INFO #DEBUG  #VERBOSE
   baud_rate: 0 #to disable logging via UART
   logs:
-    adc: INFO
+    ads1115: ERROR
+    adc: ERROR
     sensor: ERROR
-    binary_sensor: INFO
-    cover: INFO
-    switch: INFO
-    climate: INFO
+    binary_sensor: ERROR
+    cover: DEBUG
+    switch: ERROR
+    climate: DEBUG
     endstop : DEBUG
     text_sensor : ERROR
     homeassistant.sensor: ERROR

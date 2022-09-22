@@ -3,24 +3,4 @@ time:
 - platform: sntp
   timezone : ${TZ}
   servers:  [0.pool.ntp.org, 1.pool.ntp.org , 2.pool.ntp.org]
-  on_time:
-  - seconds: 0
-    minutes: 0
-    hours: 5
-    days_of_week: MON #monday at 5
-    then:
-      - switch.toggle: floor_heating_ctrl_reboot
 
-
-interval:
-  - interval: 3min
-    then:
-      - script.execute: TH1_check
-      - script.execute: TH2_check
-  - interval: 4min
-    then:
-      - script.execute: TH3_check
-      - script.execute: TH5_check
-  - interval: 5min
-    then:
-      - script.execute: TH4_check

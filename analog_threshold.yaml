@@ -1,0 +1,144 @@
+binary_sensor:
+  - platform: analog_threshold
+    name: "Valve 1 moving"
+    id: valve_moving1
+    sensor_id: ads_current1
+    threshold: ${moving_current}
+
+  - platform: analog_threshold
+    name: "Valve 2 moving"
+    id: valve_moving2
+    sensor_id: ads_current2
+    threshold: ${moving_current}
+
+  - platform: analog_threshold
+    name: "Valve 3 moving"
+    id: valve_moving3
+    sensor_id: ads_current3
+    threshold: ${moving_current}
+  
+  - platform: analog_threshold
+    name: "Valve 4 moving"
+    id: valve_moving4
+    sensor_id: ads_current4
+    threshold: ${moving_current}
+
+  - platform: analog_threshold
+    name: "Valve 5 moving"
+    id: valve_moving5
+    sensor_id: ads_current5
+    threshold: ${moving_current}
+
+  - platform: analog_threshold
+    name: "Valve 6 moving"
+    id: valve_moving6
+    sensor_id: ads_current6
+    threshold: ${moving_current}
+
+  - platform: analog_threshold
+    name: "Valve 7 moving"
+    id: valve_moving7
+    sensor_id: ads_current7
+    threshold: ${moving_current}
+  
+  - platform: analog_threshold
+    name: "Valve 8 moving"
+    id: valve_moving8
+    sensor_id: ads_current8
+    threshold: ${moving_current}
+
+  - platform: analog_threshold
+    name: "Valve 1 Closed"
+    id: valve_closed1
+    sensor_id: ads_current1
+    threshold: ${closed_current}
+
+  - platform: analog_threshold
+    name: "Valve 2 Closed"
+    id: valve_closed2
+    sensor_id: ads_current2
+    threshold: ${closed_current}
+
+  - platform: analog_threshold
+    name: "Valve 3 Closed"
+    id: valve_closed3
+    sensor_id: ads_current3
+    threshold: ${closed_current}
+  
+  - platform: analog_threshold
+    name: "Valve 4 Closed"
+    id: valve_closed4
+    sensor_id: ads_current4
+    threshold: ${closed_current}
+
+  - platform: analog_threshold
+    name: "Valve 5 Closed"
+    id: valve_closed5
+    sensor_id: ads_current5
+    threshold: ${closed_current}
+
+  - platform: analog_threshold
+    name: "Valve 6 Closed"
+    id: valve_closed6
+    sensor_id: ads_current6
+    threshold: ${closed_current}
+
+  - platform: analog_threshold
+    name: "Valve 7 Closed"
+    id: valve_closed7
+    sensor_id: ads_current7
+    threshold: ${closed_current}
+  
+  - platform: analog_threshold
+    name: "Valve 8 Closed"
+    id: valve_closed8
+    sensor_id: ads_current8
+    threshold: ${closed_current}
+
+  - platform: analog_threshold
+    name: "Valve 1 Opened"
+    id: valve_opened1
+    sensor_id: ads_current1
+    threshold: ${opened_current}
+
+  - platform: analog_threshold
+    name: "Valve 2 Opened"
+    id: valve_opened2
+    sensor_id: ads_current2
+    threshold: ${opened_current}
+
+  - platform: analog_threshold
+    name: "Valve 3 Opened"
+    id: valve_opened3
+    sensor_id: ads_current3
+    threshold: ${opened_current}
+  
+  - platform: analog_threshold
+    name: "Valve 4 Opened"
+    id: valve_opened4
+    sensor_id: ads_current4
+    threshold: ${opened_current}
+
+  - platform: analog_threshold
+    name: "Valve 5 Opened"
+    id: valve_opened5
+    sensor_id: ads_current5
+    threshold: ${opened_current}
+
+  - platform: analog_threshold
+    name: "Valve 6 Opened"
+    id: valve_opened6
+    sensor_id: ads_current6
+    threshold: ${opened_current}
+
+  - platform: analog_threshold
+    name: "Valve 7 Opened"
+    id: valve_opened7
+    sensor_id: ads_current7
+    threshold: ${opened_current}
+  
+  - platform: analog_threshold
+    name: "Valve 8 Opened"
+    id: valve_opened8
+    sensor_id: ads_current8
+    threshold: ${opened_current}

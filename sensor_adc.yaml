@@ -1,48 +1,117 @@
+i2c:
+  - id: bus_a
+    sda: GPIO21
+    scl: GPIO22
+    scan: true
+
+ads1115:
+  - address: 0x48
+    id: "ads1"
+
+  - address: 0x49
+    id: "ads2"
 
 sensor:
-#ADC2 pins cannot be used when Wi-Fi is used
-### in use the motor use 15-20 mV. At endstop, it raise to 50 mV
-  - platform: adc
-    pin: GPIO36
-    name: "BEMF 1" #CH1 + CH2
-    update_interval: 10ms
-    attenuation : 0db # 100-800mv  #0 for a full-scale voltage of 3.9V#6db #for a full-scale voltage of 2.2V #https://esphome.io/components/sensor/adc.html & https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html#_CPPv225adc1_config_channel_atten14adc1_channel_t11adc_atten_t
-    id : BEMF_1_2_sensor_ADC
+  - platform: ads1115
+    ads1115_id: "ads1"
+    multiplexer: "A0_GND"
+    gain: 0.256
+    name: "Current Valve 1"
+    id: "ads_current1"
+    device_class: current
+    update_interval: 300ms
+    unit_of_measurement: "A"
     filters:
-      - sliding_window_moving_average:
-          window_size: 15
-          send_every: 15
+      - offset: 0.0
+      - multiply: 1.070
 
-  - platform: adc
-    pin: GPIO39
-    name: "BEMF 2" #CH3 + CH4
-    update_interval: 10ms
-    attenuation : 0db # 100-800mv 
-    id : BEMF_3_4_sensor_ADC
+  - platform: ads1115
+    ads1115_id: "ads1"
+    multiplexer: "A1_GND"
+    gain: 0.256
+    name: "Current Valve 2"
+    id: "ads_current2"
+    device_class: current
+    update_interval: 300ms
+    unit_of_measurement: "A"
     filters:
-      - sliding_window_moving_average:
-          window_size: 15
-          send_every: 15
+      - offset: 0.0
+      - multiply: 1.070
 
-  - platform: adc
-    pin: GPIO34
-    name: "BEMF 3" #CH5 + CH6
-    update_interval: 10ms
-    attenuation : 0db # 100-800mv
-    id : BEMF_5_6_sensor_ADC
+  - platform: ads1115
+    ads1115_id: "ads1"
+    multiplexer: "A2_GND"
+    gain: 0.256
+    name: "Current Valve 3"
+    id: "ads_current3"
+    device_class: current
+    update_interval: 300ms
+    unit_of_measurement: "A"
     filters:
-      - sliding_window_moving_average:
-          window_size: 15
-          send_every: 15
-
-  - platform: adc
-    pin: GPIO35
-    name: "BEMF 4" #CH7 + CH8
-    update_interval: 10ms
-    attenuation : 0db # 100-800mv
-    id : BEMF_7_8_sensor_ADC
+      - offset: 0.0
+      - multiply: 1.070
+  
+  - platform: ads1115
+    ads1115_id: "ads1"
+    multiplexer: "A3_GND"
+    gain: 0.256
+    name: "Current Valve 4"
+    id: "ads_current4"
+    device_class: current
+    update_interval: 300ms
+    unit_of_measurement: "A"
     filters:
-      - sliding_window_moving_average:
-          window_size: 15
-          send_every: 15
+      - offset: 0.0
+      - multiply: 1.070
 
+  - platform: ads1115
+    ads1115_id: "ads2"
+    multiplexer: "A0_GND"
+    gain: 0.256
+    name: "Current Valve 5"
+    id: "ads_current5"
+    device_class: current
+    update_interval: 300ms
+    unit_of_measurement: "A"
+    filters:
+      - offset: 0.0
+      - multiply: 1.070
+  
+  - platform: ads1115
+    ads1115_id: "ads2"
+    multiplexer: "A1_GND"
+    gain: 0.256
+    name: "Current Valve 6"
+    id: "ads_current6"
+    device_class: current
+    update_interval: 300ms
+    unit_of_measurement: "A"
+    filters:
+      - offset: 0.0
+      - multiply: 1.070
+  
+  - platform: ads1115
+    ads1115_id: "ads2"
+    multiplexer: "A2_GND"
+    gain: 0.256
+    name: "Current Valve 7"
+    id: "ads_current7"
+    device_class: current
+    update_interval: 300ms
+    unit_of_measurement: "A"
+    filters:
+      - offset: 0.0
+      - multiply: 1.070
+    
+  - platform: ads1115
+    ads1115_id: "ads2"
+    multiplexer: "A3_GND"
+    gain: 0.256
+    name: "Current Valve 8"
+    id: "ads_current8"
+    device_class: current
+    update_interval: 300ms
+    unit_of_measurement: "A"
+    filters:
+      - offset: 0.0
+      - multiply: 1.070
