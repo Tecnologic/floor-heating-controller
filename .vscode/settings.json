@@ -1,0 +1,16 @@
+{
+    "spellright.language": [
+        "de"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "esphome"
+    ],
+    "spellright.parserByClass": {
+        "esphome": {
+            "parser": "plain"
+        }
+    }
+}

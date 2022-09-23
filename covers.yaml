@@ -1,6 +1,7 @@
 cover:
   - platform: feedback
     name: ${ch1_cover_name}
+    id: ${ch1_cover_name}_id
     open_duration: 25s
     open_endstop: valve_opened1
     open_sensor: valve_moving1
@@ -22,6 +23,7 @@ cover:
 
   - platform: feedback
     name: ${ch2_cover_name}
+    id: ${ch2_cover_name}_id
     open_duration: 25s
     open_endstop: valve_opened2
     open_sensor: valve_moving2
@@ -43,6 +45,7 @@ cover:
 
   - platform: feedback
     name: ${ch3_cover_name}
+    id: ${ch3_cover_name}_id
     open_duration: 25s
     open_endstop: valve_opened3
     open_sensor: valve_moving3
@@ -64,6 +67,7 @@ cover:
 
   - platform: feedback
     name: ${ch4_cover_name}
+    id: ${ch4_cover_name}_id
     open_duration: 25s
     open_endstop: valve_opened4
     open_sensor: valve_moving4
@@ -85,6 +89,7 @@ cover:
 
   - platform: feedback
     name: ${ch5_cover_name}
+    id: ${ch5_cover_name}_id
     open_duration: 25s
     open_endstop: valve_opened5
     open_sensor: valve_moving5
@@ -106,6 +111,7 @@ cover:
 
   - platform: feedback
     name: ${ch6_cover_name}
+    id: ${ch6_cover_name}_id
     open_duration: 25s
     open_endstop: valve_opened6
     open_sensor: valve_moving6
@@ -127,6 +133,7 @@ cover:
 
   - platform: feedback
     name: ${ch7_cover_name}
+    id: ${ch7_cover_name}_id
     open_duration: 25s
     open_endstop: valve_opened7
     open_sensor: valve_moving7
@@ -148,6 +155,7 @@ cover:
 
   - platform: feedback
     name: ${ch8_cover_name}
+    id: ${ch8_cover_name}_id
     open_duration: 25s
     open_endstop: valve_opened8
     open_sensor: valve_moving8
