@@ -93,7 +93,7 @@ substitutions:
   opened_current: "0.04"
   closed_current: "0.08"
 
-  pid_return_kp: "1.0"     # % valve position for an error of 1K.
+  pid_return_kp: "0.01"    # % valve position for an error of 1K.
   pid_return_tn: "3.0"     # kp % per hour change
   pid_return_ki: "0.000925926" # Kp / (Tn*360) | Sensor Update Rate 10s
 
