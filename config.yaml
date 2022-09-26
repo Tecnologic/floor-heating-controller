@@ -64,15 +64,15 @@ substitutions:
   ch5_thermostat_sensor: kitchen_return_temperature_sensor
   ch5_default_target_temperature: 22 °C
 
-  ch6_thermostat_name: wozi1_2 
+  ch6_thermostat_name: spare_ch6 
   ch6_thermostat_sensor: wozi1_return_temperature_sensor
   ch6_default_target_temperature: 22 °C  
 
-  ch7_thermostat_name: wozi2_2 
+  ch7_thermostat_name: spare_ch7
   ch7_thermostat_sensor: wozi2_return_temperature_sensor
   ch7_default_target_temperature: 22 °C
   
-  ch8_thermostat_name: kitchen_2 
+  ch8_thermostat_name: spare_ch8 
   ch8_thermostat_sensor: kitchen_return_temperature_sensor
   ch8_default_target_temperature: 22 °C
   
@@ -91,7 +91,7 @@ substitutions:
 
   moving_current: "0.01"
   opened_current: "0.04"
-  closed_current: "0.08"
+  closed_current: "0.05"
 
   pid_return_kp: "0.01"    # % valve position for an error of 1K.
   pid_return_tn: "3.0"     # kp % per hour change

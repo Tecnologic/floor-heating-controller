@@ -97,6 +97,7 @@ climate:
     default_target_temperature: ${ch6_default_target_temperature}
     heat_output: ${ch6_cover_name}_output_id
     #cool_output: ${ch6_cover_name}_output_id
+    disabled_by_default: true
     control_parameters:
       kp: ${pid_return_kp}
       ki: ${pid_return_ki}
@@ -115,6 +116,7 @@ climate:
     default_target_temperature: ${ch7_default_target_temperature}
     heat_output: ${ch7_cover_name}_output_id
     #cool_output: ${ch7_cover_name}_output_id
+    disabled_by_default: true
     control_parameters:
       kp: ${pid_return_kp}
       ki: ${pid_return_ki}
@@ -133,6 +135,7 @@ climate:
     default_target_temperature: ${ch8_default_target_temperature}
     heat_output: ${ch8_cover_name}_output_id
     #cool_output: ${ch8_cover_name}_output_id
+    disabled_by_default: true
     control_parameters:
       kp: ${pid_return_kp}
       ki: ${pid_return_ki}
