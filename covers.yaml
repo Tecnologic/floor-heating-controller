@@ -1,17 +1,15 @@
 cover:
-  - platform: feedback
+  - platform: endstop
     name: ${ch1_cover_name}
     id: ${ch1_cover_name}_id
     device_class: damper
     open_duration: ${valve_open_time}
     open_endstop: valve_opened1
-    open_sensor: valve_moving1
     open_action:
       - switch.turn_on: CH1_IB_pin
       - switch.turn_off: CH1_IA_pin
 
     close_duration: ${valve_close_time}
-    close_sensor: valve_moving1
     close_endstop: valve_closed1
     close_action:
       - switch.turn_on: CH1_IA_pin
@@ -22,19 +20,17 @@ cover:
       - switch.turn_off: CH1_IB_pin
     max_duration: ${valve_max_time}
 
-  - platform: feedback
+  - platform: endstop
     name: ${ch2_cover_name}
     id: ${ch2_cover_name}_id
     device_class: damper
     open_duration: ${valve_open_time}
     open_endstop: valve_opened2
-    open_sensor: valve_moving2
     open_action:
       - switch.turn_on: CH2_IB_pin
       - switch.turn_off: CH2_IA_pin
 
     close_duration: ${valve_close_time}
-    close_sensor: valve_moving2
     close_endstop: valve_closed2
     close_action:
       - switch.turn_on: CH2_IA_pin
@@ -45,19 +41,17 @@ cover:
       - switch.turn_off: CH2_IB_pin
     max_duration: ${valve_max_time}
 
-  - platform: feedback
+  - platform: endstop
     name: ${ch3_cover_name}
     id: ${ch3_cover_name}_id
     device_class: damper
     open_duration: ${valve_open_time}
     open_endstop: valve_opened3
-    open_sensor: valve_moving3
     open_action:
       - switch.turn_on: CH3_IB_pin
       - switch.turn_off: CH3_IA_pin
 
     close_duration: ${valve_close_time}
-    close_sensor: valve_moving3
     close_endstop: valve_closed3
     close_action:
       - switch.turn_on: CH3_IA_pin
@@ -68,19 +62,17 @@ cover:
       - switch.turn_off: CH3_IB_pin
     max_duration: ${valve_max_time}
 
-  - platform: feedback
+  - platform: endstop
     name: ${ch4_cover_name}
     id: ${ch4_cover_name}_id
     device_class: damper
     open_duration: ${valve_open_time}
     open_endstop: valve_opened4
-    open_sensor: valve_moving4
     open_action:
       - switch.turn_on: CH4_IB_pin
       - switch.turn_off: CH4_IA_pin
 
     close_duration: ${valve_close_time}
-    close_sensor: valve_moving4
     close_endstop: valve_closed4
     close_action:
       - switch.turn_on: CH4_IA_pin
@@ -91,19 +83,17 @@ cover:
       - switch.turn_off: CH4_IB_pin
     max_duration: ${valve_max_time}
 
-  - platform: feedback
+  - platform: endstop
     name: ${ch5_cover_name}
     id: ${ch5_cover_name}_id
     device_class: damper
     open_duration: ${valve_open_time}
     open_endstop: valve_opened5
-    open_sensor: valve_moving5
     open_action:
       - switch.turn_on: CH5_IB_pin
       - switch.turn_off: CH5_IA_pin
 
     close_duration: ${valve_close_time}
-    close_sensor: valve_moving5
     close_endstop: valve_closed5
     close_action:
       - switch.turn_on: CH5_IA_pin
@@ -114,80 +104,75 @@ cover:
       - switch.turn_off: CH5_IB_pin
     max_duration: ${valve_max_time}
 
-  - platform: feedback
-    name: ${ch6_cover_name}
-    id: ${ch6_cover_name}_id
-    device_class: damper
-    open_duration: ${valve_open_time}
-    open_endstop: valve_opened6
-    open_sensor: valve_moving6
-    open_action:
-      - switch.turn_on: CH6_IB_pin
-      - switch.turn_off: CH6_IA_pin
+  # - platform: endstop
+  #   name: ${ch6_cover_name}
+  #   id: ${ch6_cover_name}_id
+  #   device_class: damper
+  #   open_duration: ${valve_open_time}
+  #   open_endstop: valve_opened6
+  #   open_action:
+  #     - switch.turn_on: CH6_IB_pin
+  #     - switch.turn_off: CH6_IA_pin
 
-    close_duration: ${valve_close_time}
-    close_sensor: valve_moving6
-    close_endstop: valve_closed6
-    close_action:
-      - switch.turn_on: CH6_IA_pin
-      - switch.turn_off: CH6_IB_pin
+  #   close_duration: ${valve_close_time}
+  #   close_endstop: valve_closed6
+  #   close_action:
+  #     - switch.turn_on: CH6_IA_pin
+  #     - switch.turn_off: CH6_IB_pin
 
-    stop_action:
-      - switch.turn_off: CH6_IA_pin
-      - switch.turn_off: CH6_IB_pin
-    max_duration: ${valve_max_time}
+  #   stop_action:
+  #     - switch.turn_off: CH6_IA_pin
+  #     - switch.turn_off: CH6_IB_pin
+  #   max_duration: ${valve_max_time}
 
-  - platform: feedback
-    name: ${ch7_cover_name}
-    device_class: damper
-    id: ${ch7_cover_name}_id
-    open_duration: ${valve_open_time}
-    open_endstop: valve_opened7
-    open_sensor: valve_moving7
-    open_action:
-      - switch.turn_on: CH7_IB_pin
-      - switch.turn_off: CH7_IA_pin
+  # - platform: endstop
+  #   name: ${ch7_cover_name}
+  #   device_class: damper
+  #   id: ${ch7_cover_name}_id
+  #   open_duration: ${valve_open_time}
+  #   open_endstop: valve_opened7
+  #   open_action:
+  #     - switch.turn_on: CH7_IB_pin
+  #     - switch.turn_off: CH7_IA_pin
 
-    close_duration: ${valve_close_time}
-    close_sensor: valve_moving7
-    close_endstop: valve_closed7
-    close_action:
-      - switch.turn_on: CH7_IA_pin
-      - switch.turn_off: CH7_IB_pin
+  #   close_duration: ${valve_close_time}
+  #   close_endstop: valve_closed7
+  #   close_action:
+  #     - switch.turn_on: CH7_IA_pin
+  #     - switch.turn_off: CH7_IB_pin
 
-    stop_action:
-      - switch.turn_off: CH7_IA_pin
-      - switch.turn_off: CH7_IB_pin
-    max_duration: ${valve_max_time}
+  #   stop_action:
+  #     - switch.turn_off: CH7_IA_pin
+  #     - switch.turn_off: CH7_IB_pin
+  #   max_duration: ${valve_max_time}
 
-  - platform: feedback
-    name: ${ch8_cover_name}
-    id: ${ch8_cover_name}_id
-    device_class: damper
-    open_duration: ${valve_open_time}
-    open_endstop: valve_opened8
-    open_sensor: valve_moving8
-    open_action:
-      - switch.turn_on: CH8_IB_pin
-      - switch.turn_off: CH8_IA_pin
+  # - platform: endstop
+  #   name: ${ch8_cover_name}
+  #   id: ${ch8_cover_name}_id
+  #   device_class: damper
+  #   open_duration: ${valve_open_time}
+  #   open_endstop: valve_opened8
+  #   open_action:
+  #     - switch.turn_on: CH8_IB_pin
+  #     - switch.turn_off: CH8_IA_pin
 
-    close_duration: ${valve_close_time}
-    close_sensor: valve_moving8
-    close_endstop: valve_closed8
-    close_action:
-      - switch.turn_on: CH8_IA_pin
-      - switch.turn_off: CH8_IB_pin
+  #   close_duration: ${valve_close_time}
+  #   close_endstop: valve_closed8
+  #   close_action:
+  #     - switch.turn_on: CH8_IA_pin
+  #     - switch.turn_off: CH8_IB_pin
 
-    stop_action:
-      - switch.turn_off: CH8_IA_pin
-      - switch.turn_off: CH8_IB_pin
-    max_duration: ${valve_max_time}
+  #   stop_action:
+  #     - switch.turn_off: CH8_IA_pin
+  #     - switch.turn_off: CH8_IB_pin
+  #   max_duration: ${valve_max_time}
 
 # map the covers to float outputs
 output:
   - platform: template
     id: ${ch1_cover_name}_output_id
     type: float
+    max_power: 0.5
     write_action:
       - cover.control:
           id: ${ch1_cover_name}_id
@@ -197,6 +182,7 @@ output:
   - platform: template
     id: ${ch2_cover_name}_output_id
     type: float
+    max_power: 0.5
     write_action:
       - cover.control:
           id: ${ch2_cover_name}_id
@@ -206,6 +192,7 @@ output:
   - platform: template
     id: ${ch3_cover_name}_output_id
     type: float
+    max_power: 0.5
     write_action:
       - cover.control:
           id: ${ch3_cover_name}_id
@@ -215,6 +202,7 @@ output:
   - platform: template
     id: ${ch4_cover_name}_output_id
     type: float
+    max_power: 0.5
     write_action:
       - cover.control:
           id: ${ch4_cover_name}_id
@@ -224,35 +212,76 @@ output:
   - platform: template
     id: ${ch5_cover_name}_output_id
     type: float
+    max_power: 0.5
     write_action:
       - cover.control:
           id: ${ch5_cover_name}_id
           position: !lambda return state;
           
 
-  - platform: template
-    id: ${ch6_cover_name}_output_id
-    type: float
-    write_action:
-      - cover.control:
-          id: ${ch6_cover_name}_id
-          position: !lambda return state;
+  # - platform: template
+  #   id: ${ch6_cover_name}_output_id
+  #   type: float
+  #   max_power: 0.5
+  #   write_action:
+  #     - cover.control:
+  #         id: ${ch6_cover_name}_id
+  #         position: !lambda return state;
           
 
-  - platform: template
-    id: ${ch7_cover_name}_output_id
-    type: float
-    write_action:
-      - cover.control:
-          id: ${ch7_cover_name}_id
-          position: !lambda return state;
+  # - platform: template
+  #   id: ${ch7_cover_name}_output_id
+  #   type: float
+  #   max_power: 0.5
+  #   write_action:
+  #     - cover.control:
+  #         id: ${ch7_cover_name}_id
+  #         position: !lambda return state;
           
 
+  # - platform: template
+  #   id: ${ch8_cover_name}_output_id
+  #   type: float
+  #   max_power: 0.5
+  #   write_action:
+  #     - cover.control:
+  #         id: ${ch8_cover_name}_id
+  #         position: !lambda return state;
+
+sensor:
   - platform: template
-    id: ${ch8_cover_name}_output_id
-    type: float
-    write_action:
-      - cover.control:
-          id: ${ch8_cover_name}_id
-          position: !lambda return state;
+    id: ${ch1_cover_name}_position_id
+    name: ${ch1_cover_name} Position
+    lambda: |-
+        return id(${ch1_cover_name}_id).position; 
+    update_interval: 10s
+
+  - platform: template
+    id: ${ch2_cover_name}_position_id
+    name: ${ch2_cover_name} Position
+    lambda: |-
+        return id(${ch2_cover_name}_id).position; 
+    update_interval: 10s
+
+  - platform: template
+    id: ${ch3_cover_name}_position_id
+    name: ${ch3_cover_name} Position
+    lambda: |-
+        return id(${ch3_cover_name}_id).position; 
+    update_interval: 10s
+
+
+  - platform: template
+    id: ${ch4_cover_name}_position_id
+    name: ${ch4_cover_name} Position
+    lambda: |-
+        return id(${ch4_cover_name}_id).position; 
+    update_interval: 10s
+
+  - platform: template
+    id: ${ch5_cover_name}_position_id
+    name: ${ch5_cover_name} Position
+    lambda: |-
+        return id(${ch5_cover_name}_id).position;
+    update_interval: 10s
           

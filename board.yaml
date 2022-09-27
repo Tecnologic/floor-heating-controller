@@ -18,19 +18,19 @@ preferences:
   
 # Enable logging
 logger:
-  level: ERROR #NONE# ERROR #INFO #DEBUG  #VERBOSE
+  level: DEBUG #NONE# ERROR #INFO #DEBUG  #VERBOSE
   baud_rate: 0 #to disable logging via UART
   logs:
     ads1115: ERROR
     adc: ERROR
     sensor: ERROR
     binary_sensor: ERROR
-    cover: ERROR
+    cover: DEBUG
+    output: ERROR
     switch: ERROR
     climate: ERROR
     endstop : ERROR
     text_sensor : ERROR
-    homeassistant.sensor: ERROR
 
 # Enable Home Assistant API
 api:

@@ -5,8 +5,7 @@
     "spellright.documentTypes": [
         "markdown",
         "latex",
-        "plaintext",
-        "esphome"
+        "plaintext"
     ],
     "spellright.parserByClass": {
         "esphome": {
