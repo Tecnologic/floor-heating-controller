@@ -75,9 +75,9 @@ substitutions:
   pid_return_kp: "0.01"    # % valve position for an error of 1K.
   pid_return_ki: "0.0003"  # Kp / (Tn*60) | Tn in Hours, Sensor Update Rate 36s
 
-  valve_open_time: "15s"
-  valve_close_time: "20s"
-  valve_max_time: "30s"
+  valve_open_time: "20s"
+  valve_close_time: "25s"
+  valve_max_time: "35s"
 
 packages:
   wifi: !include wifi.yaml
