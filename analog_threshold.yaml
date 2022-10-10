@@ -35,27 +35,6 @@ binary_sensor:
     internal: true
 
   - platform: analog_threshold
-    name: "Valve 6 Closed"
-    id: valve_closed6
-    sensor_id: ads_current6
-    threshold: ${closed_current}
-    internal: true
-
-  - platform: analog_threshold
-    name: "Valve 7 Closed"
-    id: valve_closed7
-    sensor_id: ads_current7
-    threshold: ${closed_current}
-    internal: true
-  
-  - platform: analog_threshold
-    name: "Valve 8 Closed"
-    id: valve_closed8
-    sensor_id: ads_current8
-    threshold: ${closed_current}
-    internal: true
-
-  - platform: analog_threshold
     name: "Valve 1 Opened"
     id: valve_opened1
     sensor_id: ads_current1
@@ -87,26 +66,5 @@ binary_sensor:
     name: "Valve 5 Opened"
     id: valve_opened5
     sensor_id: ads_current5
-    threshold: ${opened_current}
-    internal: true
-
-  - platform: analog_threshold
-    name: "Valve 6 Opened"
-    id: valve_opened6
-    sensor_id: ads_current6
-    threshold: ${opened_current}
-    internal: true
-
-  - platform: analog_threshold
-    name: "Valve 7 Opened"
-    id: valve_opened7
-    sensor_id: ads_current7
-    threshold: ${opened_current}
-    internal: true
-  
-  - platform: analog_threshold
-    name: "Valve 8 Opened"
-    id: valve_opened8
-    sensor_id: ads_current8
     threshold: ${opened_current}
     internal: true
