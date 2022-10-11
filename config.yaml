@@ -90,14 +90,14 @@ substitutions:
   ch8_cover_name: xCH8 
 
   opened_current: "0.04"
-  closed_current: "0.06"
+  closed_current: "0.05"
 
   pid_return_kp: "0.01"    # % valve position for an error of 1K.
   pid_return_ki: "0.00003"  # Kp / (Tn*600) | Tn in Hours, Sensor Update Rate 10s
 
-  valve_open_time: "15s"
-  valve_close_time: "25s"
-  valve_max_time: "35s"
+  valve_open_time: "31s"
+  valve_close_time: "35s"
+  valve_max_time: "40s"
 
 packages:
   wifi: !include wifi.yaml

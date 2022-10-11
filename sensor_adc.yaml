@@ -19,11 +19,14 @@ sensor:
     name: "Current Valve 1"
     id: "ads_current1"
     device_class: current
-    update_interval: 100ms
+    update_interval: 20ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
+      - sliding_window_moving_average:
+          window_size: 30
+          send_every: 7
 
   - platform: ads1115
     ads1115_id: "ads1"
@@ -32,11 +35,14 @@ sensor:
     name: "Current Valve 2"
     id: "ads_current2"
     device_class: current
-    update_interval: 100ms
+    update_interval: 20ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
+      - sliding_window_moving_average:
+          window_size: 30
+          send_every: 7
 
   - platform: ads1115
     ads1115_id: "ads1"
@@ -45,11 +51,14 @@ sensor:
     name: "Current Valve 3"
     id: "ads_current3"
     device_class: current
-    update_interval: 100ms
+    update_interval: 20ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
+      - sliding_window_moving_average:
+          window_size: 30
+          send_every: 7
   
   - platform: ads1115
     ads1115_id: "ads1"
@@ -58,11 +67,14 @@ sensor:
     name: "Current Valve 4"
     id: "ads_current4"
     device_class: current
-    update_interval: 100ms
+    update_interval: 20ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
+      - sliding_window_moving_average:
+          window_size: 30
+          send_every: 7
 
   - platform: ads1115
     ads1115_id: "ads2"
@@ -71,9 +83,12 @@ sensor:
     name: "Current Valve 5"
     id: "ads_current5"
     device_class: current
-    update_interval: 100ms
+    update_interval: 20ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
+      - sliding_window_moving_average:
+          window_size: 30
+          send_every: 7
   
