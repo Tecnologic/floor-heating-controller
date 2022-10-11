@@ -1,6 +1,6 @@
 dallas:
   - pin: 23
-    update_interval: "60s"
+    update_interval: "10s"
 
 sensor:
   - platform: dallas
