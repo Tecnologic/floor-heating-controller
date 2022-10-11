@@ -19,7 +19,7 @@ preferences:
   
 # Enable logging
 logger:
-  level: DEBUG #NONE# ERROR #INFO #DEBUG  #VERBOSE
+  level: ERROR #NONE# ERROR #INFO #DEBUG  #VERBOSE
   baud_rate: 0 #to disable logging via UART
   logs:
     dallas: DEBUG
@@ -27,7 +27,7 @@ logger:
     adc: ERROR
     sensor: ERROR
     binary_sensor: ERROR
-    cover: DEBUG
+    cover: ERROR
     output: ERROR
     switch: ERROR
     climate: ERROR

@@ -5,7 +5,7 @@ dallas:
 sensor:
   - platform: dallas
     address: 0xe93c01f096575828
-    name: "Flur Rücklauf Temperatur"
+    name: "Flur EG Rücklauf Temperatur"
     id: "flur_return_temperature_sensor"
     
   - platform: dallas
