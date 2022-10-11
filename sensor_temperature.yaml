@@ -1,25 +1,26 @@
+
 dallas:
   - pin: 23
-    update_interval: "60s"
+    update_interval: "10s"
 
 sensor:
   - platform: dallas
-    address: 0x113c01f096208828
+    address: 0x4d3c01f096631528 # bad
     name: "Bad Rücklauf Temperatur"
     id: "bad_return_temperature_sensor"
     
   - platform: dallas
-    address: 0x4d3c01f096631528
+    address: 0xb03c01f0962a7a28 # kind1
     name: "Kind 1 Rücklauf Temperatur"
     id: "kind1_return_temperature_sensor"    
   
   - platform: dallas
-    address: 0x113c01f096100a28
+    address: 0x113c01f096208828 # kind2
     name: "Kind 2 Rücklauf Temperatur"
     id: "kind2_return_temperature_sensor"    
   
   - platform: dallas
-    address: 0xb03c01f0962a7a28
+    address: 0x113c01f096100a28 # flur
     name: "Flur OG Rücklauf Temperatur"
     id: "flur_og_return_temperature_sensor" 
   
