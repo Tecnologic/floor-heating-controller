@@ -3,14 +3,13 @@ esphome:
 
   project:
     name: "tecnologic.floor-heating-controller"
-    version: "1.01"
+    version: "1.00"
 
 esp32:
-  board: lolin_s2_mini
-  variant: esp32s2
+  board: nodemcu-32s
   framework:
     type: arduino #esp-idf  not ready missing json and async_tcp
-    version: latest
+    version: recommended #latest
 #    sdkconfig_options:
 #      CONFIG_COMPILER_OPTIMIZATION_SIZE: y
 
@@ -22,7 +21,6 @@ logger:
   level: ERROR #NONE# ERROR #INFO #DEBUG  #VERBOSE
   baud_rate: 0 #to disable logging via UART
   logs:
-    dallas: DEBUG
     ads1115: ERROR
     adc: ERROR
     sensor: ERROR
@@ -40,3 +38,13 @@ api:
       
 ota:
     password: "12345678"    
+
+
+# SN74HC595 I/O Expander (shift register) to control L9110s chips
+sn74hc595:
+  - id: 'sn74hc595_hub'
+    data_pin: GPIO16 #Pin connected to SN74HC595 SER input
+    clock_pin: GPIO5 #Pin connected to SN74HC595 SRCLK pin
+    latch_pin: GPIO17 #Pin connected to SN74HC595 RCLK pin
+    oe_pin: GPIO18 ### needed by esphome, but connected to GND (outputEnable is used only for pwm all th pin)
+    sr_count: 2 #Number of daisy-chained shift registers, up-to 4  
