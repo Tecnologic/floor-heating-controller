@@ -2,8 +2,8 @@ esphome:
   name: ${name}
 
   project:
-    name: "nliaudat.floor-heating-controller"
-    version: "1.94.dev"
+    name: "tecnologic.floor-heating-controller"
+    version: "1.00"
 
 esp32:
   board: nodemcu-32s

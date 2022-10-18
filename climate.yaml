@@ -12,7 +12,7 @@ climate:
       ki: ${pid_return_ki}
       kd: 0
       min_integral: 0
-      max_integral: 1
+      max_integral: ${integrator_limit}
     visual:
       min_temperature: 10 °C
       max_temperature: 30 °C
@@ -30,7 +30,7 @@ climate:
       ki: ${pid_return_ki}
       kd: 0
       min_integral: 0
-      max_integral: 1
+      max_integral: ${integrator_limit}
     visual:
       min_temperature: 10 °C
       max_temperature: 30 °C
@@ -48,7 +48,7 @@ climate:
       ki: ${pid_return_ki}
       kd: 0
       min_integral: 0
-      max_integral: 1
+      max_integral: ${integrator_limit}
     visual:
       min_temperature: 10 °C
       max_temperature: 30 °C
@@ -66,7 +66,7 @@ climate:
       ki: ${pid_return_ki}
       kd: 0
       min_integral: 0
-      max_integral: 1
+      max_integral: ${integrator_limit}
     visual:
       min_temperature: 10 °C
       max_temperature: 30 °C
@@ -84,7 +84,7 @@ climate:
       ki: ${pid_return_ki}
       kd: 0
       min_integral: 0
-      max_integral: 1
+      max_integral: ${integrator_limit}
     visual:
       min_temperature: 10 °C
       max_temperature: 30 °C
