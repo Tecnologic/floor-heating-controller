@@ -70,10 +70,11 @@ substitutions:
   ch4_cover_name: ventil_flug_og
 
   opened_current: "0.04"
-  closed_current: "0.05"
+  closed_current: "0.055"
 
-  pid_return_kp: "0.01"    # % valve position for an error of 1K.
-  pid_return_ki: "0.00003"  # Kp / (Tn*600) | Tn in Hours, Sensor Update Rate 10s
+  pid_return_kp: "0.01"     # % valve position for an error of 1K.
+  pid_return_ki: "0.0005"   # Kp / (Tn*600) | Tn in Hours, Sensor Update Rate 10s
+  integrator_limit: "0.3"   # Limti to 30% opening. Rest of the range is useless because drive is away from the valve
 
   valve_open_time: "31s"
   valve_close_time: "35s"

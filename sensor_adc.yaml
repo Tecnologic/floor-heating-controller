@@ -16,11 +16,14 @@ sensor:
     name: "Current Valve 1"
     id: "ads_current1"
     device_class: current
-    update_interval: 300ms
+    update_interval: 20ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
+      - sliding_window_moving_average:
+          window_size: 30
+          send_every: 7
 
   - platform: ads1115
     ads1115_id: "ads1"
