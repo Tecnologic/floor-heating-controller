@@ -47,7 +47,7 @@ binary_sensor:
     sensor_id: ads_current3
     threshold: ${opened_current}
     internal: true
-  
+
   - platform: analog_threshold
     name: "Valve 4 Opened"
     id: valve_opened4

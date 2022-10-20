@@ -23,7 +23,7 @@ sensor:
       - multiply: 1.070
       - sliding_window_moving_average:
           window_size: 30
-          send_every: 7
+          send_every: 10
 
   - platform: ads1115
     ads1115_id: "ads1"
@@ -39,7 +39,7 @@ sensor:
       - multiply: 1.070
       - sliding_window_moving_average:
           window_size: 30
-          send_every: 7
+          send_every: 10
 
   - platform: ads1115
     ads1115_id: "ads1"
@@ -55,7 +55,7 @@ sensor:
       - multiply: 1.070
       - sliding_window_moving_average:
           window_size: 30
-          send_every: 7
+          send_every: 10
   
   - platform: ads1115
     ads1115_id: "ads1"
@@ -71,6 +71,6 @@ sensor:
       - multiply: 1.070
       - sliding_window_moving_average:
           window_size: 30
-          send_every: 7
+          send_every: 10
 
 

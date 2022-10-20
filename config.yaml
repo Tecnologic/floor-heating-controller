@@ -62,15 +62,14 @@ substitutions:
   
   TZ: "Europe/Berlin" #timezone
   
-  # NOT recommended to change
   #all chars exept $
   ch1_cover_name: ventil_bad
   ch2_cover_name: ventil_kind1
   ch3_cover_name: ventil_kind2
   ch4_cover_name: ventil_flug_og
 
-  opened_current: "0.04"
-  closed_current: "0.055"
+  opened_current: "0.03"    # current must be below that value to trigger endstop
+  closed_current: "0.035"
 
   pid_return_kp: "0.01"     # % valve position for an error of 1K.
   pid_return_ki: "0.0005"   # Kp / (Tn*600) | Tn in Hours, Sensor Update Rate 10s
