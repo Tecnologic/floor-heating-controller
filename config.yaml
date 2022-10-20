@@ -48,8 +48,8 @@ substitutions:
   ch4_cover_name: ventil_wozi2
   ch5_cover_name: ventil_kueche
 
-  opened_current: "0.04"
-  closed_current: "0.055"
+  opened_current: "0.03"   
+  closed_current: "0.035"
 
   pid_return_kp: "0.01"     # % valve position for an error of 1K.
   pid_return_ki: "0.0005"   # Kp / (Tn*600) | Tn in Hours, Sensor Update Rate 10s
