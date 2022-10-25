@@ -11,5 +11,8 @@
         "esphome": {
             "parser": "plain"
         }
+    },
+    "files.associations": {
+        "*.yaml": "esphome"
     }
 }
