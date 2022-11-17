@@ -26,6 +26,27 @@ sensor:
   
   - platform: dallas
     address: 0x403c01f096080428
-    name: "Vorlauf Temperatur OG"
-    id: "heat_temperature_sensor"
+    name: "Tessa Raum Temperatur "
+    id: "kid_1_room_temperature_sensor"
+      
+  - platform: dallas
+    address: 0xfb062017e9e54228
+    name: "Raum 1 Temperatur "
+    id: "room_1_temperature_sensor"
+  
+  - platform: dallas
+    address: 0x790121113d299628
+    name: "Raum 2 Temperatur "
+    id: "room_2_temperature_sensor"
+
+  - platform: dallas
+    address: 0x2001211135154928
+    name: "Raum 3 Temperatur "
+    id: "room_3_temperature_sensor"
+
+
+  - platform: dallas
+    address: 0x4d3c01f096631528
+    name: "Raum 4 Temperatur "
+    id: "room_4_temperature_sensor"
   

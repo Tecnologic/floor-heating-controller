@@ -86,8 +86,8 @@ cover:
 # Example configuration entry
 number:
   - platform: template
-    id: ch1_override
-    name: "CH1 Override"
+    id: ${ch1_cover_name}_override
+    name: ${ch1_cover_name} Override
     initial_value: 0
     optimistic: true
     min_value: 0
@@ -95,8 +95,8 @@ number:
     step: 1
 
   - platform: template
-    id: ch2_override
-    name: "CH2 Override"
+    id: ${ch2_cover_name}_override
+    name: ${ch2_cover_name} Override
     initial_value: 0
     optimistic: true
     min_value: 0
@@ -104,8 +104,8 @@ number:
     step: 1
 
   - platform: template
-    id: ch3_override
-    name: "CH3 Override"
+    id: ${ch3_cover_name}_override
+    name: ${ch5_cover_name} Override
     initial_value: 0
     optimistic: true
     min_value: 0
@@ -113,13 +113,14 @@ number:
     step: 1
 
   - platform: template
-    id: ch4_override
-    name: "CH4 Override"
+    id: ${ch4_cover_name}_override
+    name: ${ch4_cover_name} Override
     initial_value: 0
     optimistic: true
     min_value: 0
     max_value: 100
     step: 1
+
 
 # map the covers to float outputs
 output:
@@ -129,7 +130,7 @@ output:
     write_action:
       - cover.control:
           id: ${ch1_cover_name}_id
-          position: !lambda if(id(${ch1_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(ch1_override).state / 100;
+          position: !lambda if(id(${ch1_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch1_cover_name}_override).state / 100;
           
 
   - platform: template
@@ -138,7 +139,7 @@ output:
     write_action:
       - cover.control:
           id: ${ch2_cover_name}_id
-          position: !lambda if(id(${ch2_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(ch2_override).state / 100;
+          position: !lambda if(id(${ch2_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch2_cover_name}_override).state / 100;
           
 
   - platform: template
@@ -147,7 +148,7 @@ output:
     write_action:
       - cover.control:
           id: ${ch3_cover_name}_id
-          position: !lambda if(id(${ch3_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(ch3_override).state / 100;
+          position: !lambda if(id(${ch3_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch3_cover_name}_override).state / 100;
           
 
   - platform: template
@@ -156,7 +157,7 @@ output:
     write_action:
       - cover.control:
           id: ${ch4_cover_name}_id
-          position: !lambda if(id(${ch4_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(ch4_override).state / 100;
+          position: !lambda if(id(${ch4_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch4_cover_name}_override).state / 100;
           
 sensor:
   - platform: template
@@ -182,7 +183,6 @@ sensor:
     lambda: |-
         return id(${ch3_cover_name}_id).position * 100; 
     update_interval: 10s
-
 
   - platform: template
     id: ${ch4_cover_name}_position_id

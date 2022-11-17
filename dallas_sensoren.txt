@@ -1,0 +1,20 @@
+[21:21:30][D][dallas.sensor:084]:     0xe93c01f096575828    Flur eg rl
+[21:21:30][D][dallas.sensor:084]:     0xd73c01f09613e228	
+[21:21:30][D][dallas.sensor:084]:     0xb23c01f0961bf228	Gäste WC rl
+[21:21:30][D][dallas.sensor:084]:     0xc23c01f096852a28	Wozi 1 rl
+[21:21:30][D][dallas.sensor:084]:     0x383c01f096148e28	Wozi 2 rl
+[21:21:30][D][dallas.sensor:084]:     0xdd3c01f096519928	Küche rl
+[21:21:30][D][dallas.sensor:084]:     0x25012111d7f84528
+[21:21:30][D][dallas.sensor:084]:     0x5e3c01f0963a5528	Vorlauf
+[21:21:30][D][dallas.sensor:084]:     0x72062017ec3b2328
+
+OG
+[22:11:13][D][dallas.sensor:082]:   Found sensors:
+[22:11:13][D][dallas.sensor:084]:     0x113c01f096208828	Kind 2
+[22:11:13][D][dallas.sensor:084]:     0x403c01f096080428	Tessa Raum Temp
+[22:11:13][D][dallas.sensor:084]:     0xfb062017e9e54228
+[22:11:13][D][dallas.sensor:084]:     0x113c01f096100a28	Flur OG
+[22:11:13][D][dallas.sensor:084]:     0xb03c01f0962a7a28	Kind 1
+[22:11:13][D][dallas.sensor:084]:     0x790121113d299628
+[22:11:13][D][dallas.sensor:084]:     0x2001211135154928
+[22:11:13][D][dallas.sensor:084]:     0x4d3c01f096631528

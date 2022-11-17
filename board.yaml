@@ -3,7 +3,7 @@ esphome:
 
   project:
     name: "tecnologic.floor-heating-controller"
-    version: "1.00"
+    version: "1.01"
 
 esp32:
   board: nodemcu-32s
@@ -18,14 +18,15 @@ preferences:
   
 # Enable logging
 logger:
-  level: ERROR #NONE# ERROR #INFO #DEBUG  #VERBOSE
+  level: DEBUG #NONE# ERROR #INFO #DEBUG  #VERBOSE
   baud_rate: 0 #to disable logging via UART
   logs:
+    dallas: DEBUG
     ads1115: ERROR
     adc: ERROR
     sensor: ERROR
     binary_sensor: ERROR
-    cover: ERROR
+    cover: DEBUG
     output: ERROR
     switch: ERROR
     climate: ERROR
@@ -38,7 +39,6 @@ api:
       
 ota:
     password: "12345678"    
-
 
 # SN74HC595 I/O Expander (shift register) to control L9110s chips
 sn74hc595:
