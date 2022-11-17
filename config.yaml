@@ -8,35 +8,16 @@ substitutions:
   friendly_name: "Floor heating EG"
   #must only consist of lowercase characters, the underscorecharacter and numbers. The character '#' cannot be used.
   ch1_thermostat_name: pid_flur_eg
-  ch1_thermostat_sensor: flur_return_temperature_sensor  #name of the sensor
+  ch1_thermostat_sensor: flur_room_temperature_sensor  #name of the sensor
   ch1_default_target_temperature: 20 °C
-  ch1_sleep_target_temperature: 18 °C
-  ch1_away_target_temperature: 16 °C
   
   ch2_thermostat_name: pid_wc_eg 
-  ch2_thermostat_sensor: wc_eg_return_temperature_sensor
-  ch2_default_target_temperature: 22 °C
-  ch2_sleep_target_temperature: 20 °C
-  ch2_away_target_temperature: 16 °C
-  
-  
-  ch3_thermostat_name: pid_wozi1
-  ch3_thermostat_sensor: wozi1_return_temperature_sensor
-  ch3_default_target_temperature: 22 °C
-  ch3_sleep_target_temperature: 20 °C
-  ch3_away_target_temperature: 16 °C
-  
-  ch4_thermostat_name: pid_wozi2
-  ch4_thermostat_sensor: wozi2_return_temperature_sensor
-  ch4_default_target_temperature: 22 °C
-  ch4_sleep_target_temperature: 20 °C
-  ch4_away_target_temperature: 16 °C
-  
-  ch5_thermostat_name: pid_kitchen 
-  ch5_thermostat_sensor: kitchen_return_temperature_sensor
-  ch5_default_target_temperature: 22 °C
-  ch5_sleep_target_temperature: 20 °C
-  ch5_away_target_temperature: 16 °C
+  ch2_thermostat_sensor: gwc_room_temperature_sensor
+  ch2_default_target_temperature: 21 °C
+    
+  ch3_thermostat_name: pid_wozi
+  ch3_thermostat_sensor: wozi_room_temperature_sensor
+  ch3_default_target_temperature: 21 °C
   
   TZ: "Europe/Berlin" #timezone
   
@@ -48,12 +29,12 @@ substitutions:
   ch4_cover_name: ventil_wozi2
   ch5_cover_name: ventil_kueche
 
-  opened_current: "0.03"   
+  opened_current: "0.035"   
   closed_current: "0.035"
 
-  pid_return_kp: "0.01"     # % valve position for an error of 1K.
-  pid_return_ki: "0.0005"   # Kp / (Tn*600) | Tn in Hours, Sensor Update Rate 10s
-  integrator_limit: "0.3"   # Limti to 30% opening. Rest of the range is useless because drive is away from the valve
+  pid_return_kp: "0.01"       # % valve position for an error of 1K.
+  pid_return_ki: "0.0000625"  # Kp / (Tn*60) | Tn in Hours, Sensor Update Rate 60s
+  integrator_limit: "1.0"     # Limti to 30% opening. Rest of the range is useless because drive is away from the valve
 
   valve_open_time: "31s"
   valve_close_time: "35s"

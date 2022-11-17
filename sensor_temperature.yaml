@@ -32,4 +32,19 @@ sensor:
     address: 0x5e3c01f0963a5528
     name: "Vorlauf Temperatur"
     id: "heat_temperature_sensor"
+
+  - platform: dallas
+    address: 0xd73c01f09613e228
+    name: "WoZi Raum Temperatur"
+    id: "wozi_room_temperature_sensor"
+
+  - platform: dallas
+    address: 0x25012111d7f84528
+    name: "Flur Raum Temperatur"
+    id: "flur_room_temperature_sensor"
+
+  - platform: dallas
+    address: 0x72062017ec3b2328
+    name: "Gäste WC Raum Temperatur"
+    id: "gwc_room_temperature_sensor"
   

@@ -5,6 +5,8 @@ binary_sensor:
     sensor_id: ads_current1
     threshold: ${closed_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
 
   - platform: analog_threshold
     name: "Valve 2 Closed"
@@ -12,6 +14,8 @@ binary_sensor:
     sensor_id: ads_current2
     threshold: ${closed_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
 
   - platform: analog_threshold
     name: "Valve 3 Closed"
@@ -19,6 +23,8 @@ binary_sensor:
     sensor_id: ads_current3
     threshold: ${closed_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
   
   - platform: analog_threshold
     name: "Valve 4 Closed"
@@ -26,6 +32,8 @@ binary_sensor:
     sensor_id: ads_current4
     threshold: ${closed_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
 
   - platform: analog_threshold
     name: "Valve 5 Closed"
@@ -33,6 +41,8 @@ binary_sensor:
     sensor_id: ads_current5
     threshold: ${closed_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
 
   - platform: analog_threshold
     name: "Valve 1 Opened"
@@ -40,6 +50,8 @@ binary_sensor:
     sensor_id: ads_current1
     threshold: ${opened_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
 
   - platform: analog_threshold
     name: "Valve 2 Opened"
@@ -47,6 +59,8 @@ binary_sensor:
     sensor_id: ads_current2
     threshold: ${opened_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
 
   - platform: analog_threshold
     name: "Valve 3 Opened"
@@ -54,6 +68,8 @@ binary_sensor:
     sensor_id: ads_current3
     threshold: ${opened_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
   
   - platform: analog_threshold
     name: "Valve 4 Opened"
@@ -61,6 +77,8 @@ binary_sensor:
     sensor_id: ads_current4
     threshold: ${opened_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
 
   - platform: analog_threshold
     name: "Valve 5 Opened"
@@ -68,3 +86,5 @@ binary_sensor:
     sensor_id: ads_current5
     threshold: ${opened_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
