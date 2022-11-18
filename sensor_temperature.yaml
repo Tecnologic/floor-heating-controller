@@ -10,14 +10,14 @@ sensor:
     id: "bad_return_temperature_sensor"
     
   - platform: dallas
-    address: 0xb03c01f0962a7a28 # kind1
-    name: "Kind 1 Rücklauf Temperatur"
-    id: "kind1_return_temperature_sensor"    
+    address: 0xb03c01f0962a7a28 
+    name: "Tessa Rücklauf Temperatur"
+    id: "tessa_return_temperature_sensor"    
   
   - platform: dallas
-    address: 0x113c01f096208828 # kind2
-    name: "Kind 2 Rücklauf Temperatur"
-    id: "kind2_return_temperature_sensor"    
+    address: 0x113c01f096208828 
+    name: "Kilian Rücklauf Temperatur"
+    id: "kilian_return_temperature_sensor"    
   
   - platform: dallas
     address: 0x113c01f096100a28 # flur
@@ -27,26 +27,21 @@ sensor:
   - platform: dallas
     address: 0x403c01f096080428
     name: "Tessa Raum Temperatur "
-    id: "kid_1_room_temperature_sensor"
+    id: "tessa_room_temperature_sensor"
       
   - platform: dallas
     address: 0xfb062017e9e54228
-    name: "Raum 1 Temperatur "
-    id: "room_1_temperature_sensor"
+    name: "Flur OG Raum Temperatur "
+    id: "flur_og_room_temperature_sensor"
   
   - platform: dallas
     address: 0x790121113d299628
-    name: "Raum 2 Temperatur "
-    id: "room_2_temperature_sensor"
+    name: "Bad Raum Temperatur "
+    id: "bad_room_temperature_sensor"
 
   - platform: dallas
     address: 0x2001211135154928
-    name: "Raum 3 Temperatur "
-    id: "room_3_temperature_sensor"
+    name: "Kilian Raum Temperatur "
+    id: "kilian_room_temperature_sensor"
 
-
-  - platform: dallas
-    address: 0x4d3c01f096631528
-    name: "Raum 4 Temperatur "
-    id: "room_4_temperature_sensor"
   

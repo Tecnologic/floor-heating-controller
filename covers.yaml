@@ -105,7 +105,7 @@ number:
 
   - platform: template
     id: ${ch3_cover_name}_override
-    name: ${ch5_cover_name} Override
+    name: ${ch3_cover_name} Override
     initial_value: 0
     optimistic: true
     min_value: 0
