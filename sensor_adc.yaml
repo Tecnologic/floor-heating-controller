@@ -16,7 +16,7 @@ sensor:
     ads1115_id: "ads1"
     multiplexer: "A0_GND"
     gain: 0.256
-    name: "Current Valve 1"
+    name: ${ch1_cover_name} Current
     id: "ads_current1"
     device_class: current
     update_interval: 10ms
@@ -32,7 +32,7 @@ sensor:
     ads1115_id: "ads1"
     multiplexer: "A1_GND"
     gain: 0.256
-    name: "Current Valve 2"
+    name: ${ch2_cover_name} Current
     id: "ads_current2"
     device_class: current
     update_interval: 10ms
@@ -48,7 +48,7 @@ sensor:
     ads1115_id: "ads1"
     multiplexer: "A2_GND"
     gain: 0.256
-    name: "Current Valve 3"
+    name: ${ch3_cover_name} Current
     id: "ads_current3"
     device_class: current
     update_interval: 10ms
@@ -64,7 +64,7 @@ sensor:
     ads1115_id: "ads1"
     multiplexer: "A3_GND"
     gain: 0.256
-    name: "Current Valve 4"
+    name: ${ch4_cover_name} Current
     id: "ads_current4"
     device_class: current
     update_interval: 10ms
@@ -80,7 +80,7 @@ sensor:
     ads1115_id: "ads2"
     multiplexer: "A0_GND"
     gain: 0.256
-    name: "Current Valve 5"
+    name: ${ch5_cover_name} Current
     id: "ads_current5"
     device_class: current
     update_interval: 10ms
