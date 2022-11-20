@@ -1,41 +1,3 @@
-# change log 
-# v101:
-# inputs.yaml : add substitution for bemf_trigger values cause bemf_trigger do not survive hassio reboot
-# v100:
-# climate.yaml : 11.11.2021 : remove away_config (temperature do not survive reboot : https://github.com/esphome/issues/issues/2680#issuecomment-966863690
-# V99 :
-# divide into packages :https://esphome.io/guides/configuration-types.html#config-substitutions
-# V95 :
-# default_mode: heat_cool (https://github.com/esphome/issues/issues/2680#issuecomment-966006171)
-# V94 :
-# substitution for default_target_temperature_low + high
-# disable web_server as not needed anymore for debug
-# V93 :
-# substitution for temperature function (round(((diff_temp+1)/2)/0.1)*0.1;)
-# V92 :
-# minimum movement of valve 0.01 replaced with number.min_movement_change (if (abs(current_position - target_position) > id(min_movement).state/100) {)
-# V91 :
-# add timezone substitution
-# V90:
-# logger sensor + text_sensor + homeassistant.sensor : ERROR
-# disable schedule valve_maintenance as it's triggered on reboot once a week
-# v89 : 
-# add check for CLIMATE_MODE_OFF 
-# add default_mode: auto to thermostat
-# v85 :
-# Rollback function tested (bug)
-# add esp32: routine
-# flash_write_interval: 60min
-# Substitution for names
-# replace check_interval loop in climate.thermostat by interval (or time)
-# Number for parameters like BEMF triggers
-# One BEMF trigger param per channel
-# add idle global variable for thermostat
-# Re test pid climate with that parameters  for low temperature heating :  kp: 30 ki: 0.005 kd: -24000
-# Test current_base_cover : done but do not work  as expected : endstop triggered as FLT_MAX parameter is reach but FLT_MAX is position. I do not understand.
-
-
-
 # for flashing : press boot button for 2-3 seconds before the serial connection initialize
 # After OTA update, the EN (reset) button must be pressed to run firmware
 # do not use gpio12 (MTDI)
@@ -48,12 +10,12 @@ substitutions:
   ch1_thermostat_sensor: bad_room_temperature_sensor  #name of the sensor
   ch1_default_target_temperature: 21 °C
   
-  ch2_thermostat_name: pid_tessa 
-  ch2_thermostat_sensor: tessa_room_temperature_sensor
+  ch2_thermostat_name: pid_kilian 
+  ch2_thermostat_sensor: kilian_room_temperature_sensor
   ch2_default_target_temperature: 20 °C
   
-  ch3_thermostat_name: pid_kilian
-  ch3_thermostat_sensor: kilian_room_temperature_sensor
+  ch3_thermostat_name: pid_tessa
+  ch3_thermostat_sensor: tessa_room_temperature_sensor
   ch3_default_target_temperature: 20 °C
   
   ch4_thermostat_name: pid_flur_og
@@ -64,15 +26,15 @@ substitutions:
   
   #all chars exept $
   ch1_cover_name: ventil_bad
-  ch2_cover_name: ventil_tessa 
-  ch3_cover_name: ventil_kilian
+  ch2_cover_name: ventil_kilian 
+  ch3_cover_name: ventil_tessa
   ch4_cover_name: ventil_flug_og
 
   opened_current: "0.035"   
   closed_current: "0.035"
 
-  pid_return_kp: "0.01"       # % valve position for an error of 1K.
-  pid_return_ki: "0.0000625"  # Kp / (Tn*60) | Tn in Hours, Sensor Update Rate 60s
+  pid_return_kp: "0.05"       # % valve position for an error of 1K.
+  pid_return_ki: "0.0001"     # Kp / (Tn*60) | Tn in Hours, Sensor Update Rate 60s
   integrator_limit: "1.0"     # Limti to 30% opening. Rest of the range is useless because drive is away from the valve
 
   valve_open_time: "31s"
