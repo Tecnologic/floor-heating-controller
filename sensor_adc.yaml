@@ -19,13 +19,13 @@ sensor:
     name: ${ch1_cover_name} Current
     id: "ads_current1"
     device_class: current
-    update_interval: 10ms
+    update_interval: 2ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
       - sliding_window_moving_average:
-          window_size: 10
+          window_size: 30
           send_every: 5
 
   - platform: ads1115
@@ -35,13 +35,13 @@ sensor:
     name: ${ch2_cover_name} Current
     id: "ads_current2"
     device_class: current
-    update_interval: 10ms
+    update_interval: 2ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
       - sliding_window_moving_average:
-          window_size: 10
+          window_size: 30
           send_every: 5
 
   - platform: ads1115
@@ -51,13 +51,13 @@ sensor:
     name: ${ch3_cover_name} Current
     id: "ads_current3"
     device_class: current
-    update_interval: 10ms
+    update_interval: 2ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
       - sliding_window_moving_average:
-          window_size: 10
+          window_size: 30
           send_every: 5
   
   - platform: ads1115
@@ -67,13 +67,13 @@ sensor:
     name: ${ch4_cover_name} Current
     id: "ads_current4"
     device_class: current
-    update_interval: 10ms
+    update_interval: 2ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
       - sliding_window_moving_average:
-          window_size: 10
+          window_size: 30
           send_every: 5
 
   - platform: ads1115
@@ -83,12 +83,12 @@ sensor:
     name: ${ch5_cover_name} Current
     id: "ads_current5"
     device_class: current
-    update_interval: 10ms
+    update_interval: 2ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
       - multiply: 1.070
       - sliding_window_moving_average:
-          window_size: 10
+          window_size: 30
           send_every: 5
   
