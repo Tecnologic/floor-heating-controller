@@ -62,7 +62,7 @@ sensor:
       then:
         - cover.control:
             id: ${ch1_cover_name}_id
-            position: !lambda return x;
+            position: !lambda return x/100;
 
   # - platform: pid
   #   climate_id: ${ch1_thermostat_name}_thermostat
