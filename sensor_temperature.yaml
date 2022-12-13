@@ -46,4 +46,5 @@ sensor:
 
   - platform: homeassistant
     name: "Tessa Raum Temperatur HT"
+    id: shellyht_temperature
     entity_id: sensor.shellyht_74f015_temperature

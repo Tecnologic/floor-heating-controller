@@ -15,7 +15,7 @@ substitutions:
   ch2_default_target_temperature: 20 °C
   
   ch3_thermostat_name: pid_tessa
-  ch3_thermostat_sensor: tessa_room_temperature_sensor
+  ch3_thermostat_sensor: shellyht_temperature #tessa_room_temperature_sensor
   ch3_default_target_temperature: 20 °C
   
   ch4_thermostat_name: pid_flur_og
