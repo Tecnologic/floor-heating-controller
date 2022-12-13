@@ -47,4 +47,5 @@ sensor:
     address: 0x72062017ec3b2328
     name: "Gäste WC Raum Temperatur"
     id: "gwc_room_temperature_sensor"
-  
+
+    

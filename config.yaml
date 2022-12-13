@@ -8,7 +8,7 @@ substitutions:
   friendly_name: "Floor heating EG"
   #must only consist of lowercase characters, the underscorecharacter and numbers. The character '#' cannot be used.
   ch1_thermostat_name: pid_flur_eg
-  ch1_thermostat_sensor: flur_room_temperature_sensor  #name of the sensor
+  ch1_thermostat_sensor: sensor.raum_1_temperatur # flur_room_temperature_sensor  #name of the sensor
   ch1_default_target_temperature: 20 °C
   
   ch2_thermostat_name: pid_wc_eg 
@@ -32,7 +32,7 @@ substitutions:
   opened_current: "0.035"   
   closed_current: "0.035"
 
-  pid_return_kp: "0.05"       # % valve position for an error of 1K.
+  pid_return_kp: "0.025"       # % valve position for an error of 1K.
   pid_return_ki: "0.0001"     # Kp / (Tn*60) | Tn in Hours, Sensor Update Rate 60s
   integrator_limit: "1.0"     # Limti to 30% opening. Rest of the range is useless because drive is away from the valve
 

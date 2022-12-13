@@ -1,22 +1,22 @@
-            
+  
 climate:  
-  - platform: pid
-    id: ${ch1_thermostat_name}_thermostat
-    name: ${ch1_thermostat_name}
-    sensor: ${ch1_thermostat_sensor}
-    default_target_temperature: ${ch1_default_target_temperature}
-    heat_output: ${ch1_cover_name}_output_id
-    #cool_output: ${ch1_cover_name}_output_id
-    control_parameters:
-      kp: ${pid_return_kp}
-      ki: ${pid_return_ki}
-      kd: 0
-      min_integral: 0
-      max_integral: ${integrator_limit}
-    visual:
-      min_temperature: 10 °C
-      max_temperature: 30 °C
-      temperature_step: 0.5 °C
+  # - platform: pid
+  #   id: ${ch1_thermostat_name}_thermostat
+  #   name: ${ch1_thermostat_name}
+  #   sensor: ${ch1_thermostat_sensor}
+  #   default_target_temperature: ${ch1_default_target_temperature}
+  #   heat_output: ${ch1_cover_name}_output_id
+  #   #cool_output: ${ch1_cover_name}_output_id
+  #   control_parameters:
+  #     kp: ${pid_return_kp}
+  #     ki: ${pid_return_ki}
+  #     kd: 0
+  #     min_integral: 0
+  #     max_integral: ${integrator_limit}
+  #   visual:
+  #     min_temperature: 10 °C
+  #     max_temperature: 30 °C
+  #     temperature_step: 0.5 °C
       
   - platform: pid
     id: ${ch2_thermostat_name}_thermostat
@@ -55,10 +55,19 @@ climate:
       temperature_step: 0.5 °C
 
 sensor:
-  - platform: pid
-    climate_id: ${ch1_thermostat_name}_thermostat
-    name: ${ch1_cover_name} Result
-    type: RESULT
+  - platform: homeassistant
+    name: "Flur OG Position"
+    entity_id: sensor.ventil_flug_og_result    
+    on_value:
+      then:
+        - cover.control:
+            id: ${ch1_cover_name}_id
+            position: !lambda return x;
+
+  # - platform: pid
+  #   climate_id: ${ch1_thermostat_name}_thermostat
+  #   name: ${ch1_cover_name} Result
+  #   type: RESULT
 
   - platform: pid
     climate_id: ${ch2_thermostat_name}_thermostat
