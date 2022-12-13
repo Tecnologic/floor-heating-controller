@@ -208,13 +208,13 @@ number:
 
 # map the covers to float outputs
 output:
-  - platform: template
-    id: ${ch1_cover_name}_output_id
-    type: float
-    write_action:
-      - cover.control:
-          id: ${ch1_cover_name}_id
-          position: !lambda if(id(${ch1_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch1_cover_name}_override).state / 100;
+  # - platform: template
+  #   id: ${ch1_cover_name}_output_id
+  #   type: float
+  #   write_action:
+  #     - cover.control:
+  #         id: ${ch1_cover_name}_id
+  #         position: !lambda if(id(${ch1_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch1_cover_name}_override).state / 100;
           
 
   - platform: template
