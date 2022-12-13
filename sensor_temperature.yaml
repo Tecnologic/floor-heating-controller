@@ -44,4 +44,6 @@ sensor:
     name: "Kilian Raum Temperatur "
     id: "kilian_room_temperature_sensor"
 
-  
+  - platform: homeassistant
+    name: "Tessa Raum Temperatur HT"
+    entity_id: sensor.shellyht_74f015_temperature

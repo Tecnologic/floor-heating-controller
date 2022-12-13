@@ -33,7 +33,7 @@ substitutions:
   opened_current: "0.035"   
   closed_current: "0.035"
 
-  pid_return_kp: "0.05"       # % valve position for an error of 1K.
+  pid_return_kp: "0.025"      # % valve position for an error of 1K.
   pid_return_ki: "0.0001"     # Kp / (Tn*60) | Tn in Hours, Sensor Update Rate 60s
   integrator_limit: "1.0"     # Limti to 30% opening. Rest of the range is useless because drive is away from the valve
 
