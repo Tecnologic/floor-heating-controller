@@ -3,8 +3,8 @@
 # do not use gpio12 (MTDI)
 
 substitutions:
-  name: floor-heating-controller-og
-  friendly_name: "Floor heating OG"
+  name: floor-heating-controller-s2-og
+  friendly_name: "Floor heating S2 OG"
   #must only consist of lowercase characters, the underscorecharacter and numbers. The character '#' cannot be used.
   ch1_thermostat_name: pid_bad
   ch1_thermostat_sensor: bad_room_temperature_sensor  #name of the sensor

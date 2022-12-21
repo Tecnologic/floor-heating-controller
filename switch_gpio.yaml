@@ -4,20 +4,14 @@ switch:
     ### CH1
   - platform: gpio
     name: "CH1 IA"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 0
-      inverted: False
+    pin: 9
     internal: true  
     id: CH1_IA_pin
     interlock: &interlock_group_CH1 [CH1_IA_pin, CH1_IB_pin]
     restore_mode: always off
   - platform: gpio
     name: "CH1 IB"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 1
-      inverted: False
+    pin: 10
     internal: true 
     id: CH1_IB_pin
     interlock: *interlock_group_CH1
@@ -25,20 +19,14 @@ switch:
     ### CH2
   - platform: gpio
     name: "CH2 IA"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 2
-      inverted: False
+    pin: 11
     internal: true 
     id: CH2_IA_pin
     interlock: &interlock_group_CH2 [CH2_IA_pin, CH2_IB_pin]
     restore_mode: always off
   - platform: gpio
     name: "CH2 IB"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 3
-      inverted: False
+    pin: 12
     internal: true 
     id: CH2_IB_pin
     interlock: *interlock_group_CH2
@@ -46,20 +34,14 @@ switch:
     ### CH3
   - platform: gpio
     name: "CH3 IA"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 4
-      inverted: False
+    pin: 13
     internal: true 
     id: CH3_IA_pin
     interlock: &interlock_group_CH3 [CH3_IA_pin, CH3_IB_pin]
     restore_mode: always off
   - platform: gpio
     name: "CH3 IB"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 5
-      inverted: False
+    pin: 14
     internal: true 
     id: CH3_IB_pin
     interlock: *interlock_group_CH3
@@ -67,20 +49,14 @@ switch:
     ### CH4
   - platform: gpio
     name: "CH4 IA"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 6
-      inverted: False
+    pin: 16
     internal: true 
     id: CH4_IA_pin
     interlock: &interlock_group_CH4 [CH4_IA_pin, CH4_IB_pin]
     restore_mode: always off
   - platform: gpio
     name: "CH4 IB"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 7
-      inverted: False
+    pin: 17
     internal: true 
     id: CH4_IB_pin
     interlock: *interlock_group_CH4
@@ -88,20 +64,14 @@ switch:
     ### CH5
   - platform: gpio
     name: "CH5 IA"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 8
-      inverted: False
+    pin: 18
     internal: true 
     id: CH5_IA_pin
     interlock: &interlock_group_CH5 [CH5_IA_pin, CH5_IB_pin]
     restore_mode: always off
   - platform: gpio
     name: "CH5 IB"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 9
-      inverted: False
+    pin: 21
     internal: true 
     id: CH5_IB_pin
     interlock: *interlock_group_CH5
@@ -109,20 +79,14 @@ switch:
     ### CH6
   - platform: gpio
     name: "CH6 IA"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 10
-      inverted: False
+    pin: 33
     internal: true 
     id: CH6_IA_pin
     interlock: &interlock_group_CH6 [CH6_IA_pin, CH6_IB_pin]
     restore_mode: always off
   - platform: gpio
     name: "CH6 IB"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 11
-      inverted: False
+    pin: 34
     internal: true 
     id: CH6_IB_pin
     interlock: *interlock_group_CH6
@@ -130,20 +94,14 @@ switch:
     ### CH7
   - platform: gpio
     name: "CH7 IA"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 12
-      inverted: False
+    pin: 35
     internal: true 
     id: CH7_IA_pin
     interlock: &interlock_group_CH7 [CH7_IA_pin, CH7_IB_pin]
     restore_mode: always off
   - platform: gpio
     name: "CH7 IB"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 13
-      inverted: False
+    pin: 36
     internal: true 
     id: CH7_IB_pin
     interlock: *interlock_group_CH7
@@ -151,20 +109,14 @@ switch:
     ### CH8
   - platform: gpio
     name: "CH8 IA"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 14
-      inverted: False
+    pin: 37
     internal: true 
     id: CH8_IA_pin
     interlock: &interlock_group_CH8 [CH8_IA_pin, CH8_IB_pin]
     restore_mode: always off
   - platform: gpio
     name: "CH8 IB"
-    pin:
-      sn74hc595: sn74hc595_hub
-      number: 15
-      inverted: False
+    pin: 38
     internal: true 
     id: CH8_IB_pin
     interlock: *interlock_group_CH8

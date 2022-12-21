@@ -1,18 +1,8 @@
-i2c:
-  - id: bus_a
-    sda: GPIO21
-    scl: GPIO22
-    scan: true
-
-ads1115:
-  - address: 0x48
-    id: "ads1"
-
 sensor:
-  - platform: ads1115
-    ads1115_id: "ads1"
-    multiplexer: "A0_GND"
-    gain: 0.256
+  - platform: adc
+    pin: GPIO1
+    accuracy_decimals: 5
+    attenuation: 11dB
     name: ${ch1_cover_name} Current
     id: "ads_current1"
     device_class: current
@@ -25,10 +15,10 @@ sensor:
           window_size: 30
           send_every: 5
 
-  - platform: ads1115
-    ads1115_id: "ads1"
-    multiplexer: "A1_GND"
-    gain: 0.256
+  - platform: adc
+    pin: GPIO2
+    accuracy_decimals: 5
+    attenuation: 11dB
     name: ${ch2_cover_name} Current
     id: "ads_current2"
     device_class: current
@@ -41,10 +31,10 @@ sensor:
           window_size: 30
           send_every: 5
 
-  - platform: ads1115
-    ads1115_id: "ads1"
-    multiplexer: "A2_GND"
-    gain: 0.256
+  - platform: adc
+    pin: GPIO3
+    accuracy_decimals: 5
+    attenuation: 11dB
     name: ${ch3_cover_name} Current
     id: "ads_current3"
     device_class: current
@@ -57,10 +47,10 @@ sensor:
           window_size: 30
           send_every: 5
   
-  - platform: ads1115
-    ads1115_id: "ads1"
-    multiplexer: "A3_GND"
-    gain: 0.256
+  - platform: adc
+    pin: GPIO4
+    accuracy_decimals: 5
+    attenuation: 11dB
     name: ${ch4_cover_name} Current
     id: "ads_current4"
     device_class: current
