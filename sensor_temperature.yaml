@@ -5,43 +5,41 @@ dallas:
 
 sensor:
   - platform: dallas
-    address: 0x4d3c01f096631528 # bad
-    name: "Bad Rücklauf Temperatur"
-    id: "bad_return_temperature_sensor"
+    address: 0x4d3c01f096631521
+    name: "Room 1 temperature"
+    id: "room_1_temperature_sensor"
     
   - platform: dallas
-    address: 0xb03c01f0962a7a28 
-    name: "Tessa Rücklauf Temperatur"
-    id: "tessa_return_temperature_sensor"    
-  
-  - platform: dallas
-    address: 0x113c01f096208828 
-    name: "Kilian Rücklauf Temperatur"
-    id: "kilian_return_temperature_sensor"    
-  
-  - platform: dallas
-    address: 0x113c01f096100a28 # flur
-    name: "Flur OG Rücklauf Temperatur"
-    id: "flur_og_return_temperature_sensor" 
-  
-  - platform: dallas
-    address: 0x403c01f096080428
-    name: "Tessa Raum Temperatur "
-    id: "tessa_room_temperature_sensor"
-      
-  - platform: dallas
-    address: 0xfb062017e9e54228
-    name: "Flur OG Raum Temperatur "
-    id: "flur_og_room_temperature_sensor"
-  
-  - platform: dallas
-    address: 0x790121113d299628
-    name: "Bad Raum Temperatur "
-    id: "bad_room_temperature_sensor"
+    address: 0x4d3c01f096631522
+    name: "Room 2 temperature"
+    id: "room_2_temperature_sensor"
 
   - platform: dallas
-    address: 0x2001211135154928
-    name: "Kilian Raum Temperatur "
-    id: "kilian_room_temperature_sensor"
+    address: 0x4d3c01f096631523
+    name: "Room 3 temperature"
+    id: "room_3_temperature_sensor"
 
-  
+  - platform: dallas
+    address: 0x4d3c01f096631524
+    name: "Room 4 temperature"
+    id: "room_4_temperature_sensor"
+
+  - platform: dallas
+    address: 0x4d3c01f096631525
+    name: "Room 5 temperature"
+    id: "room_5_temperature_sensor"
+
+  - platform: dallas
+    address: 0x4d3c01f096631526
+    name: "Room 6 temperature"
+    id: "room_6_temperature_sensor"
+
+  - platform: dallas
+    address: 0x4d3c01f096631527
+    name: "Room 7 temperature"
+    id: "room_7_temperature_sensor"
+
+  - platform: dallas
+    address: 0x4d3c01f096631528
+    name: "Room 8 temperature"
+    id: "room_8_temperature_sensor"

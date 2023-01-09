@@ -3,32 +3,53 @@
 # do not use gpio12 (MTDI)
 
 substitutions:
-  name: floor-heating-controller-s2-og
-  friendly_name: "Floor heating S2 OG"
+  name: floor-heating-controller
+  friendly_name: "Floor heating controller"
   #must only consist of lowercase characters, the underscorecharacter and numbers. The character '#' cannot be used.
-  ch1_thermostat_name: pid_bad
-  ch1_thermostat_sensor: bad_room_temperature_sensor  #name of the sensor
+  ch1_thermostat_name: pid_1
+  ch1_thermostat_sensor: room_1_temperature_sensor  #name of the sensor
   ch1_default_target_temperature: 21 °C
-  
-  ch2_thermostat_name: pid_kilian 
-  ch2_thermostat_sensor: kilian_room_temperature_sensor
-  ch2_default_target_temperature: 20 °C
-  
-  ch3_thermostat_name: pid_tessa
-  ch3_thermostat_sensor: tessa_room_temperature_sensor
-  ch3_default_target_temperature: 20 °C
-  
-  ch4_thermostat_name: pid_flur_og
-  ch4_thermostat_sensor: flur_og_room_temperature_sensor
-  ch4_default_target_temperature: 20 °C
-  
+
+  ch2_thermostat_sensor: room_2_temperature_sensor  #name of the sensor
+  ch2_thermostat_name: pid_2
+  ch2_default_target_temperature: 21 °C
+
+  ch3_thermostat_name: pid_3
+  ch3_thermostat_sensor: room_3_temperature_sensor  #name of the sensor
+  ch3_default_target_temperature: 21 °C
+
+  ch4_thermostat_name: pid_4
+  ch4_thermostat_sensor: room_4_temperature_sensor  #name of the sensor
+  ch4_default_target_temperature: 21 °C
+
+  ch5_thermostat_name: pid_5
+  ch5_thermostat_sensor: room_5_temperature_sensor  #name of the sensor
+  ch5_default_target_temperature: 21 °C
+
+  ch6_thermostat_name: pid_6
+  ch6_thermostat_sensor: room_6_temperature_sensor  #name of the sensor
+  ch6_default_target_temperature: 21 °C
+
+  ch7_thermostat_name: pid_7
+  ch7_thermostat_sensor: room_7_temperature_sensor  #name of the sensor
+  ch7_default_target_temperature: 21 °C
+
+  ch8_thermostat_name: pid_8
+  ch8_thermostat_sensor: room_8_temperature_sensor  #name of the sensor
+  ch8_default_target_temperature: 21 °C
+
   TZ: "Europe/Berlin" #timezone
   
   #all chars exept $
-  ch1_cover_name: ventil_bad
-  ch2_cover_name: ventil_kilian 
-  ch3_cover_name: ventil_tessa
-  ch4_cover_name: ventil_flug_og
+  ch1_cover_name: ventil_1
+  ch2_cover_name: ventil_2 
+  ch3_cover_name: ventil_3
+  ch4_cover_name: ventil_4
+  ch5_cover_name: ventil_5
+  ch6_cover_name: ventil_6 
+  ch7_cover_name: ventil_7
+  ch8_cover_name: ventil_8
+
 
   opened_current: "0.035"   
   closed_current: "0.035"

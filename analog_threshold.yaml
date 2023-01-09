@@ -1,73 +1,128 @@
 binary_sensor:
   - platform: analog_threshold
-    name: "Valve 1 Closed"
-    id: valve_closed1
-    sensor_id: ads_current1
+    id: ${ch1_cover_name}_closed
+    sensor_id: ${ch1_cover_name}_current
     threshold: ${closed_current}
     internal: true
     filters:
       - delayed_on: 100ms
 
   - platform: analog_threshold
-    name: "Valve 2 Closed"
-    id: valve_closed2
-    sensor_id: ads_current2
+    id: ${ch2_cover_name}_closed
+    sensor_id: ${ch2_cover_name}_current
     threshold: ${closed_current}
     internal: true
     filters:
       - delayed_on: 100ms
 
   - platform: analog_threshold
-    name: "Valve 3 Closed"
-    id: valve_closed3
-    sensor_id: ads_current3
-    threshold: ${closed_current}
-    internal: true
-    filters:
-      - delayed_on: 100ms
-  
-  - platform: analog_threshold
-    name: "Valve 4 Closed"
-    id: valve_closed4
-    sensor_id: ads_current4
+    id: ${ch3_cover_name}_closed
+    sensor_id: ${ch3_cover_name}_current
     threshold: ${closed_current}
     internal: true
     filters:
       - delayed_on: 100ms
 
   - platform: analog_threshold
-    name: "Valve 1 Opened"
-    id: valve_opened1
-    sensor_id: ads_current1
+    id: ${ch4_cover_name}_closed
+    sensor_id: ${ch4_cover_name}_current
+    threshold: ${closed_current}
+    internal: true
+    filters:
+      - delayed_on: 100ms
+
+  - platform: analog_threshold
+    id: ${ch5_cover_name}_closed
+    sensor_id: ${ch5_cover_name}_current
+    threshold: ${closed_current}
+    internal: true
+    filters:
+      - delayed_on: 100ms
+
+  - platform: analog_threshold
+    id: ${ch6_cover_name}_closed
+    sensor_id: ${ch6_cover_name}_current
+    threshold: ${closed_current}
+    internal: true
+    filters:
+      - delayed_on: 100ms
+
+  - platform: analog_threshold
+    id: ${ch7_cover_name}_closed
+    sensor_id: ${ch7_cover_name}_current
+    threshold: ${closed_current}
+    internal: true
+    filters:
+      - delayed_on: 100ms
+
+  - platform: analog_threshold
+    id: ${ch8_cover_name}_closed
+    sensor_id: ${ch8_cover_name}_current
+    threshold: ${closed_current}
+    internal: true
+    filters:
+      - delayed_on: 100ms
+
+  - platform: analog_threshold
+    id: ${ch1_cover_name}_opened
+    sensor_id: ${ch1_cover_name}_current
     threshold: ${opened_current}
     internal: true
     filters:
       - delayed_on: 100ms
 
   - platform: analog_threshold
-    name: "Valve 2 Opened"
-    id: valve_opened2
-    sensor_id: ads_current2
+    id: ${ch2_cover_name}_opened
+    sensor_id: ${ch2_cover_name}_current
+    threshold: ${opened_current}
+    internal: true
+    filters:
+      - delayed_on: 100ms
+      
+  - platform: analog_threshold
+    id: ${ch3_cover_name}_opened
+    sensor_id: ${ch3_cover_name}_current
+    threshold: ${opened_current}
+    internal: true
+    filters:
+      - delayed_on: 100ms
+      
+  - platform: analog_threshold
+    id: ${ch4_cover_name}_opened
+    sensor_id: ${ch4_cover_name}_current
     threshold: ${opened_current}
     internal: true
     filters:
       - delayed_on: 100ms
 
   - platform: analog_threshold
-    name: "Valve 3 Opened"
-    id: valve_opened3
-    sensor_id: ads_current3
+    id: ${ch5_cover_name}_opened
+    sensor_id: ${ch5_cover_name}_current
     threshold: ${opened_current}
     internal: true
     filters:
       - delayed_on: 100ms
 
   - platform: analog_threshold
-    name: "Valve 4 Opened"
-    id: valve_opened4
-    sensor_id: ads_current4
+    id: ${ch6_cover_name}_opened
+    sensor_id: ${ch6_cover_name}_current
     threshold: ${opened_current}
     internal: true
     filters:
       - delayed_on: 100ms
-
+      
+  - platform: analog_threshold
+    id: ${ch7_cover_name}_opened
+    sensor_id: ${ch7_cover_name}_current
+    threshold: ${opened_current}
+    internal: true
+    filters:
+      - delayed_on: 100ms
+      
+  - platform: analog_threshold
+    id: ${ch8_cover_name}_opened
+    sensor_id: ${ch8_cover_name}_current
+    threshold: ${opened_current}
+    internal: true
+    filters:
+      - delayed_on: 100ms

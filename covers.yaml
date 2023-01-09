@@ -4,13 +4,13 @@ cover:
     id: ${ch1_cover_name}_id
     device_class: damper
     open_duration: ${valve_open_time}
-    open_endstop: valve_opened1
+    open_endstop: ${ch1_cover_name}_opened
     open_action:
       - switch.turn_on: CH1_IB_pin
       - switch.turn_off: CH1_IA_pin
 
     close_duration: ${valve_close_time}
-    close_endstop: valve_closed1
+    close_endstop: ${ch1_cover_name}_closed
     close_action:
       - switch.turn_on: CH1_IA_pin
       - switch.turn_off: CH1_IB_pin
@@ -25,13 +25,13 @@ cover:
     id: ${ch2_cover_name}_id
     device_class: damper
     open_duration: ${valve_open_time}
-    open_endstop: valve_opened2
+    open_endstop: ${ch2_cover_name}_opened
     open_action:
       - switch.turn_on: CH2_IB_pin
       - switch.turn_off: CH2_IA_pin
 
     close_duration: ${valve_close_time}
-    close_endstop: valve_closed2
+    close_endstop: ${ch2_cover_name}_closed
     close_action:
       - switch.turn_on: CH2_IA_pin
       - switch.turn_off: CH2_IB_pin
@@ -46,13 +46,13 @@ cover:
     id: ${ch3_cover_name}_id
     device_class: damper
     open_duration: ${valve_open_time}
-    open_endstop: valve_opened3
+    open_endstop: ${ch3_cover_name}_opened
     open_action:
       - switch.turn_on: CH3_IB_pin
       - switch.turn_off: CH3_IA_pin
 
     close_duration: ${valve_close_time}
-    close_endstop: valve_closed3
+    close_endstop: ${ch2_cover_name}_closed
     close_action:
       - switch.turn_on: CH3_IA_pin
       - switch.turn_off: CH3_IB_pin
@@ -67,13 +67,13 @@ cover:
     id: ${ch4_cover_name}_id
     device_class: damper
     open_duration: ${valve_open_time}
-    open_endstop: valve_opened4
+    open_endstop: ${ch4_cover_name}_opened
     open_action:
       - switch.turn_on: CH4_IB_pin
       - switch.turn_off: CH4_IA_pin
 
     close_duration: ${valve_close_time}
-    close_endstop: valve_closed4
+    close_endstop: ${ch4_cover_name}_closed
     close_action:
       - switch.turn_on: CH4_IA_pin
       - switch.turn_off: CH4_IB_pin
@@ -81,6 +81,90 @@ cover:
     stop_action:
       - switch.turn_off: CH4_IA_pin
       - switch.turn_off: CH4_IB_pin
+    max_duration: ${valve_max_time}
+  
+  - platform: endstop
+    name: ${ch5_cover_name}
+    id: ${ch5_cover_name}_id
+    device_class: damper
+    open_duration: ${valve_open_time}
+    open_endstop: ${ch5_cover_name}_opened
+    open_action:
+      - switch.turn_on: CH5_IB_pin
+      - switch.turn_off: CH5_IA_pin
+
+    close_duration: ${valve_close_time}
+    close_endstop: ${ch5_cover_name}_closed
+    close_action:
+      - switch.turn_on: CH5_IA_pin
+      - switch.turn_off: CH5_IB_pin
+
+    stop_action:
+      - switch.turn_off: CH5_IA_pin
+      - switch.turn_off: CH5_IB_pin
+    max_duration: ${valve_max_time}
+
+  - platform: endstop
+    name: ${ch6_cover_name}
+    id: ${ch6_cover_name}_id
+    device_class: damper
+    open_duration: ${valve_open_time}
+    open_endstop: ${ch6_cover_name}_opened
+    open_action:
+      - switch.turn_on: CH6_IB_pin
+      - switch.turn_off: CH6_IA_pin
+
+    close_duration: ${valve_close_time}
+    close_endstop: ${ch6_cover_name}_closed
+    close_action:
+      - switch.turn_on: CH6_IA_pin
+      - switch.turn_off: CH6_IB_pin
+
+    stop_action:
+      - switch.turn_off: CH6_IA_pin
+      - switch.turn_off: CH6_IB_pin
+    max_duration: ${valve_max_time}
+
+  - platform: endstop
+    name: ${ch7_cover_name}
+    id: ${ch7_cover_name}_id
+    device_class: damper
+    open_duration: ${valve_open_time}
+    open_endstop: ${ch7_cover_name}_opened
+    open_action:
+      - switch.turn_on: CH7_IB_pin
+      - switch.turn_off: CH7_IA_pin
+
+    close_duration: ${valve_close_time}
+    close_endstop: ${ch7_cover_name}_closed
+    close_action:
+      - switch.turn_on: CH7_IA_pin
+      - switch.turn_off: CH7_IB_pin
+
+    stop_action:
+      - switch.turn_off: CH7_IA_pin
+      - switch.turn_off: CH7_IB_pin
+    max_duration: ${valve_max_time}
+
+  - platform: endstop
+    name: ${ch8_cover_name}
+    id: ${ch8_cover_name}_id
+    device_class: damper
+    open_duration: ${valve_open_time}
+    open_endstop: ${ch8_cover_name}_opened
+    open_action:
+      - switch.turn_on: CH8_IB_pin
+      - switch.turn_off: CH8_IA_pin
+
+    close_duration: ${valve_close_time}
+    close_endstop: ${ch8_cover_name}_closed
+    close_action:
+      - switch.turn_on: CH8_IA_pin
+      - switch.turn_off: CH8_IB_pin
+
+    stop_action:
+      - switch.turn_off: CH8_IA_pin
+      - switch.turn_off: CH8_IB_pin
     max_duration: ${valve_max_time}
 
 # Example configuration entry

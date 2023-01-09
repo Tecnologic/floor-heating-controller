@@ -4,7 +4,7 @@ sensor:
     accuracy_decimals: 1
     attenuation: 11dB
     name: ${ch1_cover_name} Current
-    id: "ads_current1"
+    id: "${ch1_cover_name}_current"
     device_class: current
     update_interval: 2ms
     unit_of_measurement: "mA"
@@ -20,7 +20,7 @@ sensor:
     accuracy_decimals: 1
     attenuation: 11dB
     name: ${ch2_cover_name} Current
-    id: "ads_current2"
+    id: "${ch2_cover_name}_current"
     device_class: current
     update_interval: 2ms
     unit_of_measurement: "mA"
@@ -36,7 +36,7 @@ sensor:
     accuracy_decimals: 1
     attenuation: 11dB
     name: ${ch3_cover_name} Current
-    id: "ads_current3"
+    id: "${ch3_cover_name}_current"
     device_class: current
     update_interval: 2ms
     unit_of_measurement: "mA"
@@ -52,7 +52,7 @@ sensor:
     accuracy_decimals: 1
     attenuation: 11dB
     name: ${ch4_cover_name} Current
-    id: "ads_current4"
+    id: "${ch4_cover_name}_current"
     device_class: current
     update_interval: 2ms
     unit_of_measurement: "mA"
@@ -63,4 +63,66 @@ sensor:
           window_size: 30
           send_every: 5
 
+  - platform: adc
+    pin: GPIO5
+    accuracy_decimals: 1
+    attenuation: 11dB
+    name: ${ch5_cover_name} Current
+    id: "${ch5_cover_name}_current"
+    device_class: current
+    update_interval: 2ms
+    unit_of_measurement: "mA"
+    filters:
+      - offset: -1.25
+      - multiply: 70
+      - sliding_window_moving_average:
+          window_size: 30
+          send_every: 5
 
+  - platform: adc
+    pin: GPIO6
+    accuracy_decimals: 1
+    attenuation: 11dB
+    name: ${ch6_cover_name} Current
+    id: "${ch6_cover_name}_current"
+    device_class: current
+    update_interval: 2ms
+    unit_of_measurement: "mA"
+    filters:
+      - offset: -1.25
+      - multiply: 70
+      - sliding_window_moving_average:
+          window_size: 30
+          send_every: 5
+
+  - platform: adc
+    pin: GPIO7
+    accuracy_decimals: 1
+    attenuation: 11dB
+    name: ${ch7_cover_name} Current
+    id: "${ch7_cover_name}_current"
+    device_class: current
+    update_interval: 2ms
+    unit_of_measurement: "mA"
+    filters:
+      - offset: -1.25
+      - multiply: 70
+      - sliding_window_moving_average:
+          window_size: 30
+          send_every: 5
+  
+  - platform: adc
+    pin: GPIO8
+    accuracy_decimals: 1
+    attenuation: 11dB
+    name: ${ch8_cover_name} Current
+    id: "${ch8_cover_name}_current"
+    device_class: current
+    update_interval: 2ms
+    unit_of_measurement: "mA"
+    filters:
+      - offset: -1.25
+      - multiply: 70
+      - sliding_window_moving_average:
+          window_size: 30
+          send_every: 5
