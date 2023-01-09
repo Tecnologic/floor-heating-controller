@@ -1,4 +1,13 @@
 cover:
+  - platform: custom
+    lambda: |-
+      auto current_cover = new CurrentCover();
+      App.register_component(current_cover);
+      return {current_cover};
+
+    covers:
+    - name: "Current Cover"
+
   - platform: endstop
     name: ${ch1_cover_name}
     id: ${ch1_cover_name}_id

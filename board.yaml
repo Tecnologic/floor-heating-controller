@@ -1,5 +1,8 @@
 esphome:
   name: ${name}
+  
+  includes:
+    - current_cover.h
 
   project:
     name: "tecnologic.floor-heating-controller"
