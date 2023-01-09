@@ -41,18 +41,18 @@ substitutions:
   TZ: "Europe/Berlin" #timezone
   
   #all chars exept $
-  ch1_cover_name: ventil_1
-  ch2_cover_name: ventil_2 
-  ch3_cover_name: ventil_3
-  ch4_cover_name: ventil_4
-  ch5_cover_name: ventil_5
-  ch6_cover_name: ventil_6 
-  ch7_cover_name: ventil_7
-  ch8_cover_name: ventil_8
+  ch1_cover_name: ${ch1_thermostat_name}_valve
+  ch2_cover_name: ${ch2_thermostat_name}_valve
+  ch3_cover_name: ${ch3_thermostat_name}_valve
+  ch4_cover_name: ${ch4_thermostat_name}_valve
+  ch5_cover_name: ${ch5_thermostat_name}_valve
+  ch6_cover_name: ${ch6_thermostat_name}_valve
+  ch7_cover_name: ${ch7_thermostat_name}_valve
+  ch8_cover_name: ${ch8_thermostat_name}_valve
 
 
-  opened_current: "0.035"   
-  closed_current: "0.035"
+  opened_current: "40.0"   
+  closed_current: "28.0"
 
   pid_return_kp: "0.05"       # % valve position for an error of 1K.
   pid_return_ki: "0.0001"     # Kp / (Tn*60) | Tn in Hours, Sensor Update Rate 60s

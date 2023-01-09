@@ -176,7 +176,7 @@ number:
     optimistic: true
     min_value: 0
     max_value: 100
-    step: 1
+    step: 10
 
   - platform: template
     id: ${ch2_cover_name}_override
@@ -185,7 +185,7 @@ number:
     optimistic: true
     min_value: 0
     max_value: 100
-    step: 1
+    step: 10
 
   - platform: template
     id: ${ch3_cover_name}_override
@@ -194,7 +194,7 @@ number:
     optimistic: true
     min_value: 0
     max_value: 100
-    step: 1
+    step: 10
 
   - platform: template
     id: ${ch4_cover_name}_override
@@ -203,20 +203,55 @@ number:
     optimistic: true
     min_value: 0
     max_value: 100
-    step: 1
+    step: 10
+
+  - platform: template
+    id: ${ch5_cover_name}_override
+    name: ${ch5_cover_name} Override
+    initial_value: 0
+    optimistic: true
+    min_value: 0
+    max_value: 100
+    step: 10
+
+  - platform: template
+    id: ${ch6_cover_name}_override
+    name: ${ch6_cover_name} Override
+    initial_value: 0
+    optimistic: true
+    min_value: 0
+    max_value: 100
+    step: 10
+
+  - platform: template
+    id: ${ch7_cover_name}_override
+    name: ${ch7_cover_name} Override
+    initial_value: 0
+    optimistic: true
+    min_value: 0
+    max_value: 100
+    step: 10
+
+  - platform: template
+    id: ${ch8_cover_name}_override
+    name: ${ch8_cover_name} Override
+    initial_value: 0
+    optimistic: true
+    min_value: 0
+    max_value: 100
+    step: 10
 
 
 # map the covers to float outputs
 output:
-  # - platform: template
-  #   id: ${ch1_cover_name}_output_id
-  #   type: float
-  #   write_action:
-  #     - cover.control:
-  #         id: ${ch1_cover_name}_id
-  #         position: !lambda if(id(${ch1_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch1_cover_name}_override).state / 100;
+  - platform: template
+    id: ${ch1_cover_name}_output_id
+    type: float
+    write_action:
+      - cover.control:
+          id: ${ch1_cover_name}_id
+          position: !lambda if(id(${ch1_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch1_cover_name}_override).state / 100;
           
-
   - platform: template
     id: ${ch2_cover_name}_output_id
     type: float
@@ -225,7 +260,6 @@ output:
           id: ${ch2_cover_name}_id
           position: !lambda if(id(${ch2_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch2_cover_name}_override).state / 100;
           
-
   - platform: template
     id: ${ch3_cover_name}_output_id
     type: float
@@ -243,6 +277,40 @@ output:
           id: ${ch4_cover_name}_id
           position: !lambda if(id(${ch4_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch4_cover_name}_override).state / 100;
           
+  - platform: template
+    id: ${ch5_cover_name}_output_id
+    type: float
+    write_action:
+      - cover.control:
+          id: ${ch5_cover_name}_id
+          position: !lambda if(id(${ch5_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch5_cover_name}_override).state / 100;
+          
+  - platform: template
+    id: ${ch6_cover_name}_output_id
+    type: float
+    write_action:
+      - cover.control:
+          id: ${ch6_cover_name}_id
+          position: !lambda if(id(${ch6_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch6_cover_name}_override).state / 100;
+          
+  - platform: template
+    id: ${ch7_cover_name}_output_id
+    type: float
+    write_action:
+      - cover.control:
+          id: ${ch7_cover_name}_id
+          position: !lambda if(id(${ch7_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch7_cover_name}_override).state / 100;
+          
+
+  - platform: template
+    id: ${ch8_cover_name}_output_id
+    type: float
+    write_action:
+      - cover.control:
+          id: ${ch8_cover_name}_id
+          position: !lambda if(id(${ch8_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch8_cover_name}_override).state / 100;
+
+
 sensor:
   - platform: template
     id: ${ch1_cover_name}_position_id
@@ -250,7 +318,7 @@ sensor:
     unit_of_measurement: '%'
     lambda: |-
         return id(${ch1_cover_name}_id).position * 100; 
-    update_interval: 10s
+    update_interval: 1s
 
   - platform: template
     id: ${ch2_cover_name}_position_id
@@ -258,7 +326,7 @@ sensor:
     unit_of_measurement: '%'
     lambda: |-
         return id(${ch2_cover_name}_id).position * 100; 
-    update_interval: 10s
+    update_interval: 1s
 
   - platform: template
     id: ${ch3_cover_name}_position_id
@@ -266,7 +334,7 @@ sensor:
     unit_of_measurement: '%'
     lambda: |-
         return id(${ch3_cover_name}_id).position * 100; 
-    update_interval: 10s
+    update_interval: 1s
 
   - platform: template
     id: ${ch4_cover_name}_position_id
@@ -274,4 +342,36 @@ sensor:
     unit_of_measurement: '%'
     lambda: |-
         return id(${ch4_cover_name}_id).position * 100; 
-    update_interval: 10s
+    update_interval: 1s
+
+  - platform: template
+    id: ${ch5_cover_name}_position_id
+    name: ${ch5_cover_name} Position
+    unit_of_measurement: '%'
+    lambda: |-
+        return id(${ch5_cover_name}_id).position * 100; 
+    update_interval: 1s
+
+  - platform: template
+    id: ${ch6_cover_name}_position_id
+    name: ${ch6_cover_name} Position
+    unit_of_measurement: '%'
+    lambda: |-
+        return id(${ch6_cover_name}_id).position * 100; 
+    update_interval: 1s
+
+  - platform: template
+    id: ${ch7_cover_name}_position_id
+    name: ${ch7_cover_name} Position
+    unit_of_measurement: '%'
+    lambda: |-
+        return id(${ch7_cover_name}_id).position * 100; 
+    update_interval: 1s
+
+  - platform: template
+    id: ${ch8_cover_name}_position_id
+    name: ${ch8_cover_name} Position
+    unit_of_measurement: '%'
+    lambda: |-
+        return id(${ch8_cover_name}_id).position * 100; 
+    update_interval: 1s

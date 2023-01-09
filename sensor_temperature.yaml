@@ -5,7 +5,7 @@ dallas:
 
 sensor:
   - platform: dallas
-    address: 0x4d3c01f096631521
+    address: 0x9ebc84231e64ff28
     name: "Room 1 temperature"
     id: "room_1_temperature_sensor"
     
