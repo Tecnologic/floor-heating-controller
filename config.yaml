@@ -3,32 +3,37 @@
 # do not use gpio12 (MTDI)
 
 substitutions:
-  name: floor-heating-controller-og
-  friendly_name: "Floor heating OG"
+  name: floor-heating-controller-eg
+  friendly_name: "Floor heating EG"
   #must only consist of lowercase characters, the underscorecharacter and numbers. The character '#' cannot be used.
-  ch1_thermostat_name: pid_bad
-  ch1_thermostat_sensor: bad_room_temperature_sensor  #name of the sensor
-  ch1_default_target_temperature: 21 °C
+  ch1_thermostat_name: pid_flur_eg
+  ch1_thermostat_sensor: flur_return_temperature_sensor  #name of the sensor
+  ch1_default_target_temperature: 20 °C
   
-  ch2_thermostat_name: pid_kilian 
-  ch2_thermostat_sensor: kilian_room_temperature_sensor
-  ch2_default_target_temperature: 21 °C
+  ch2_thermostat_name: pid_wc_eg 
+  ch2_thermostat_sensor: wc_eg_return_temperature_sensor
+  ch2_default_target_temperature: 22 °C
   
-  ch3_thermostat_name: pid_tessa
-  ch3_thermostat_sensor: tessa_room_temperature_sensor
-  ch3_default_target_temperature: 21 °C
+  ch3_thermostat_name: pid_wozi1
+  ch3_thermostat_sensor: wozi1_return_temperature_sensor
+  ch3_default_target_temperature: 22 °C
   
-  ch4_thermostat_name: pid_flur_og
-  ch4_thermostat_sensor: flur_og_room_temperature_sensor
-  ch4_default_target_temperature: 20 °C
+  ch4_thermostat_name: pid_wozi2
+  ch4_thermostat_sensor: wozi2_return_temperature_sensor
+  ch4_default_target_temperature: 22 °C
   
+  ch5_thermostat_name: pid_kitchen 
+  ch5_thermostat_sensor: kitchen_return_temperature_sensor
+  ch5_default_target_temperature: 22 °C
+
   TZ: "Europe/Berlin" #timezone
   
   #all chars exept $
-  ch1_cover_name: ventil_bad
-  ch2_cover_name: ventil_kilian 
-  ch3_cover_name: ventil_tessa
-  ch4_cover_name: ventil_flug_og
+  ch1_cover_name: ventil_flur_eg
+  ch2_cover_name: ventil_wc_eg
+  ch3_cover_name: ventil_wozi1
+  ch4_cover_name: ventil_wozi2
+  ch5_cover_name: ventil_kueche
 
   opened_current: "0.035"   
   closed_current: "0.035"

@@ -14,8 +14,8 @@ climate:
       min_integral: 0
       max_integral: ${integrator_limit}
     visual:
-      min_temperature: 10 °C
-      max_temperature: 30 °C
+      min_temperature: 15 °C
+      max_temperature: 25 °C
       temperature_step: 0.5 °C
       
   - platform: pid
@@ -32,8 +32,8 @@ climate:
       min_integral: 0
       max_integral: ${integrator_limit}
     visual:
-      min_temperature: 10 °C
-      max_temperature: 30 °C
+      min_temperature: 15 °C
+      max_temperature: 25 °C
       temperature_step: 0.5 °C
 
   - platform: pid
@@ -50,8 +50,8 @@ climate:
       min_integral: 0
       max_integral: ${integrator_limit}
     visual:
-      min_temperature: 10 °C
-      max_temperature: 30 °C
+      min_temperature: 15 °C
+      max_temperature: 25 °C
       temperature_step: 0.5 °C
 
   - platform: pid
@@ -68,11 +68,27 @@ climate:
       min_integral: 0
       max_integral: ${integrator_limit}
     visual:
-      min_temperature: 10 °C
-      max_temperature: 30 °C
+      min_temperature: 15 °C
+      max_temperature: 25 °C
       temperature_step: 0.5 °C
 
-
+  - platform: pid
+    id: ${ch5_thermostat_name}_thermostat
+    name: ${ch5_thermostat_name}
+    sensor: ${ch5_thermostat_sensor}
+    default_target_temperature: ${ch5_default_target_temperature}
+    heat_output: ${ch5_cover_name}_output_id
+    #cool_output: ${ch5_cover_name}_output_id
+    control_parameters:
+      kp: ${pid_return_kp}
+      ki: ${pid_return_ki}
+      kd: 0
+      min_integral: 0
+      max_integral: 1
+    visual:
+      min_temperature: 15 °C
+      max_temperature: 25 °C
+      temperature_step: 0.5 °C
 
 sensor:
   - platform: pid
@@ -93,4 +109,9 @@ sensor:
   - platform: pid
     climate_id: ${ch4_thermostat_name}_thermostat
     name: ${ch4_cover_name} Result
+    type: RESULT
+
+  - platform: pid
+    climate_id: ${ch5_thermostat_name}_thermostat
+    name: ${ch5_cover_name} Result
     type: RESULT
