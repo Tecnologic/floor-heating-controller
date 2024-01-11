@@ -22,8 +22,8 @@ sensor:
       - offset: 0.0
       - multiply: 1.070
       - sliding_window_moving_average:
-          window_size: 30
-          send_every: 5
+          window_size: 10
+          send_every: 3
 
   - platform: ads1115
     ads1115_id: "ads1"
@@ -38,8 +38,8 @@ sensor:
       - offset: 0.0
       - multiply: 1.070
       - sliding_window_moving_average:
-          window_size: 30
-          send_every: 5
+          window_size: 10
+          send_every: 3
 
   - platform: ads1115
     ads1115_id: "ads1"
@@ -54,8 +54,8 @@ sensor:
       - offset: 0.0
       - multiply: 1.070
       - sliding_window_moving_average:
-          window_size: 30
-          send_every: 5
+          window_size: 10
+          send_every: 3
   
   - platform: ads1115
     ads1115_id: "ads1"
@@ -70,7 +70,7 @@ sensor:
       - offset: 0.0
       - multiply: 1.070
       - sliding_window_moving_average:
-          window_size: 30
-          send_every: 5
+          window_size: 10
+          send_every: 3
 
 

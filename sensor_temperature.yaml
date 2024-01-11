@@ -10,12 +10,12 @@ sensor:
     id: "bad_return_temperature_sensor"
     
   - platform: dallas
-    address: 0xb03c01f0962a7a28 
+    address: 0x113c01f096208828 
     name: "Tessa Rücklauf Temperatur"
     id: "tessa_return_temperature_sensor"    
   
   - platform: dallas
-    address: 0x113c01f096208828 
+    address: 0xb03c01f0962a7a28
     name: "Kilian Rücklauf Temperatur"
     id: "kilian_return_temperature_sensor"    
   
@@ -43,8 +43,3 @@ sensor:
     address: 0x2001211135154928
     name: "Kilian Raum Temperatur "
     id: "kilian_room_temperature_sensor"
-
-  - platform: homeassistant
-    name: "Tessa Raum Temperatur HT"
-    id: shellyht_temperature
-    entity_id: sensor.shellyht_74f015_temperature
