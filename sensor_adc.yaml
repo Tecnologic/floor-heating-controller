@@ -81,7 +81,7 @@ sensor:
     ads1115_id: "ads2"
     multiplexer: "A0_GND"
     gain: 0.256
-    name: "Current Valve 5"
+    name: ${ch5_cover_name} Current
     id: "ads_current5"
     device_class: current
     update_interval: 300ms
@@ -93,45 +93,3 @@ sensor:
           window_size: 10
           send_every: 3
   
-  - platform: ads1115
-    ads1115_id: "ads2"
-    multiplexer: "A1_GND"
-    gain: 0.256
-    name: "Current Valve 6"
-    id: "ads_current6"
-    device_class: current
-    update_interval: 300ms
-    unit_of_measurement: "A"
-    filters:
-      - offset: 0.0
-      - multiply: 1.070
-      - sliding_window_moving_average:
-          window_size: 10
-          send_every: 3
-  
-  - platform: ads1115
-    ads1115_id: "ads2"
-    multiplexer: "A2_GND"
-    gain: 0.256
-    name: "Current Valve 7"
-    id: "ads_current7"
-    device_class: current
-    update_interval: 300ms
-    unit_of_measurement: "A"
-    filters:
-      - offset: 0.0
-      - multiply: 1.070
-    
-  - platform: ads1115
-    ads1115_id: "ads2"
-    multiplexer: "A3_GND"
-    gain: 0.256
-    name: "Current Valve 8"
-    id: "ads_current8"
-    device_class: current
-    update_interval: 300ms
-    unit_of_measurement: "A"
-    filters:
-      - offset: 0.0
-      - multiply: 1.070
-

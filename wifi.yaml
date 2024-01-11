@@ -1,5 +1,6 @@
 
 wifi:
+  use_address: 192.168.1.98
   networks:
   - ssid: !secret wifi_ssid_1
     hidden: false
