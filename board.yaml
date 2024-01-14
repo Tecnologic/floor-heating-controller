@@ -18,7 +18,7 @@ preferences:
   
 # Enable logging
 logger:
-  level: DEBUG #NONE# ERROR #INFO #DEBUG  #VERBOSE
+  level: INFO #NONE# ERROR #INFO #DEBUG  #VERBOSE
   baud_rate: 0 #to disable logging via UART
   logs:
     dallas: DEBUG

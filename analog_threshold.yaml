@@ -36,15 +36,6 @@ binary_sensor:
       - delayed_on: 100ms
 
   - platform: analog_threshold
-    name: "Valve 5 Closed"
-    id: valve_closed5
-    sensor_id: ads_current5
-    threshold: ${closed_current}
-    internal: true
-    filters:
-      - delayed_on: 100ms
-
-  - platform: analog_threshold
     name: "Valve 1 Opened"
     id: valve_opened1
     sensor_id: ads_current1
@@ -78,15 +69,4 @@ binary_sensor:
     threshold: ${opened_current}
     internal: true
     filters:
-      - delayed_on: 100ms
-
-  - platform: analog_threshold
-    name: "Valve 5 Opened"
-    id: valve_opened5
-    sensor_id: ads_current5
-    threshold: ${opened_current}
-    internal: true
-    filters:
-      - delayed_on: 100ms
-
-  
+      - delayed_on: 100ms  
