@@ -84,6 +84,45 @@ cover:
     max_duration: ${valve_max_time}
 
 
+# Example configuration entry
+number:
+  - platform: template
+    id: ${ch1_cover_name}_override
+    name: ${ch1_cover_name} Override
+    initial_value: 0
+    optimistic: true
+    min_value: 0
+    max_value: 100
+    step: 1
+
+  - platform: template
+    id: ${ch2_cover_name}_override
+    name: ${ch2_cover_name} Override
+    initial_value: 0
+    optimistic: true
+    min_value: 0
+    max_value: 100
+    step: 1
+
+  - platform: template
+    id: ${ch3_cover_name}_override
+    name: ${ch3_cover_name} Override
+    initial_value: 0
+    optimistic: true
+    min_value: 0
+    max_value: 100
+    step: 1
+
+  - platform: template
+    id: ${ch4_cover_name}_override
+    name: ${ch4_cover_name} Override
+    initial_value: 0
+    optimistic: true
+    min_value: 0
+    max_value: 100
+    step: 1
+
+
 # map the covers to float outputs
 output:
   - platform: template
@@ -121,40 +160,35 @@ output:
           id: ${ch4_cover_name}_id
           position: !lambda if(id(${ch4_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch4_cover_name}_override).state / 100;
 
- # Example configuration entry
-number:
+sensor:
   - platform: template
-    id: ${ch1_cover_name}_override
-    name: ${ch1_cover_name} Override
-    initial_value: 0
-    optimistic: true
-    min_value: 0
-    max_value: 100
-    step: 1
+    id: ${ch1_cover_name}_position_id
+    name: ${ch1_cover_name} Position
+    unit_of_measurement: '%'
+    lambda: |-
+        return id(${ch1_cover_name}_id).position * 100; 
+    update_interval: 10s
 
   - platform: template
-    id: ${ch2_cover_name}_override
-    name: ${ch2_cover_name} Override
-    initial_value: 0
-    optimistic: true
-    min_value: 0
-    max_value: 100
-    step: 1
+    id: ${ch2_cover_name}_position_id
+    name: ${ch2_cover_name} Position
+    unit_of_measurement: '%'
+    lambda: |-
+        return id(${ch2_cover_name}_id).position * 100; 
+    update_interval: 10s
 
   - platform: template
-    id: ${ch3_cover_name}_override
-    name: ${ch3_cover_name} Override
-    initial_value: 0
-    optimistic: true
-    min_value: 0
-    max_value: 100
-    step: 1
+    id: ${ch3_cover_name}_position_id
+    name: ${ch3_cover_name} Position
+    unit_of_measurement: '%'
+    lambda: |-
+        return id(${ch3_cover_name}_id).position * 100; 
+    update_interval: 10s
 
   - platform: template
-    id: ${ch4_cover_name}_override
-    name: ${ch4_cover_name} Override
-    initial_value: 0
-    optimistic: true
-    min_value: 0
-    max_value: 100
-    step: 1
+    id: ${ch4_cover_name}_position_id
+    name: ${ch4_cover_name} Position
+    unit_of_measurement: '%'
+    lambda: |-
+        return id(${ch4_cover_name}_id).position * 100; 
+    update_interval: 10s
