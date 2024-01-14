@@ -8,6 +8,9 @@ ads1115:
   - address: 0x48
     id: "ads1"
 
+- address: 0x49
+    id: "ads2"
+
 sensor:
   - platform: ads1115
     ads1115_id: "ads1"
@@ -73,4 +76,20 @@ sensor:
           window_size: 25
           send_every: 5
 
+
+  - platform: ads1115
+    ads1115_id: "ads2"
+    multiplexer: "A0_GND"
+    gain: 0.256
+    name: ${ch5_cover_name} Current
+    id: "ads_current5"
+    device_class: current
+    update_interval: 300ms
+    unit_of_measurement: "A"
+    filters:
+      - offset: 0.0
+      - multiply: 1.070
+      - sliding_window_moving_average:
+          window_size: 25
+          send_every: 5
   
