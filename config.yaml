@@ -35,15 +35,15 @@ substitutions:
   ch4_cover_name: ventil_wozi2
   ch5_cover_name: ventil_kueche
 
-  opened_current: "0.035"   
-  closed_current: "0.035"
+  opened_current: "0.033"   
+  closed_current: "0.030"
 
-  pid_return_kp: "0.1"        # % valve position for an error of 1K.
-  pid_return_ki: "0.0001"     # Kp / (Tn*60) | Tn in Hours, Sensor Update Rate 60s
-  integrator_limit: "0.3"     # Limti to 30% opening. Rest of the range is useless because drive is away from the valve
+  pid_return_kp: "0.5"        # % valve position for an error of 1K.
+  pid_return_ki: "0.00002"    # Kp / (Tn*60) | Tn in Hours, Sensor Update Rate 60s
+  integrator_limit: "1.0"     # Limti to Integrator if needed
 
-  valve_open_time: "10s"
-  valve_close_time: "15s"
+  valve_open_time: "20s"
+  valve_close_time: "25s"
   valve_max_time: "25s"
 
 packages:

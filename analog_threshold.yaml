@@ -41,6 +41,8 @@ binary_sensor:
     sensor_id: ads_current5
     threshold: ${closed_current}
     internal: true
+    filters:
+      - delayed_on: 100ms
 
   - platform: analog_threshold
     name: "Valve 1 Opened"
