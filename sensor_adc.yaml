@@ -8,7 +8,7 @@ ads1115:
   - address: 0x48
     id: "ads1"
 
-- address: 0x49
+  - address: 0x49
     id: "ads2"
 
 sensor:

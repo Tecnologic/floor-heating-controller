@@ -83,7 +83,7 @@ cover:
       - switch.turn_off: CH4_IB_pin
     max_duration: ${valve_max_time}
 
- - platform: endstop
+  - platform: endstop
     name: ${ch5_cover_name}
     id: ${ch5_cover_name}_id
     device_class: damper
@@ -198,7 +198,7 @@ output:
           position: !lambda if(id(${ch5_thermostat_name}_thermostat).mode != CLIMATE_MODE_OFF) return state; else return id(${ch5_cover_name}_override).state / 100;
 
 
- sensor:
+sensor:
   - platform: template
     id: ${ch1_cover_name}_position_id
     name: ${ch1_cover_name} Position

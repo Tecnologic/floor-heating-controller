@@ -1,6 +1,4 @@
-# for flashing : press boot button for 2-3 seconds before the serial connection initialize
-# After OTA update, the EN (reset) button must be pressed to run firmware
-# do not use gpio12 (MTDI)
+# For OTA update start here
 
 substitutions:
   name: floor-heating-controller-eg
