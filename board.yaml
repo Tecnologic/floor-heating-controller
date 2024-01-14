@@ -18,20 +18,20 @@ preferences:
   
 # Enable logging
 logger:
-  level: INFO #NONE# ERROR #INFO #DEBUG  #VERBOSE
+  level: WARN #NONE# ERROR #INFO #DEBUG  #VERBOSE
   baud_rate: 0 #to disable logging via UART
   logs:
-    dallas: DEBUG
-    ads1115: ERROR
-    adc: ERROR
-    sensor: ERROR
-    binary_sensor: ERROR
-    cover: DEBUG
-    output: ERROR
-    switch: ERROR
-    climate: ERROR
-    endstop : ERROR
-    text_sensor : ERROR
+    dallas: WARN
+    ads1115: WARN
+    adc: WARN
+    sensor: WARN
+    binary_sensor: WARN
+    cover: WARN
+    output: WARN
+    switch: WARN
+    climate: WARN
+    endstop : WARN
+    text_sensor : WARN
 
 # Enable Home Assistant API
 api:
