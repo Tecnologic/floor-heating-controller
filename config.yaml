@@ -28,8 +28,10 @@ substitutions:
   ch3_cover_name: ventil_tessa
   ch4_cover_name: ventil_flug_og
 
-  opened_current: "0.033"   
-  closed_current: "0.030"
+  opened_current: "0.030"   
+  opened_delay: "500ms"
+  closed_current: "0.033"
+  closed_delay: "500ms"
 
   pid_return_kp: "0.5"        # % valve position for an error of 1K.
   pid_return_ki: "0.00002"    # Kp / (Tn*60) | Tn in Hours, Sensor Update Rate 60s
