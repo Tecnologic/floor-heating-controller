@@ -6,7 +6,7 @@ binary_sensor:
     threshold: ${closed_current}
     internal: true
     filters:
-      - delayed_on: 100ms
+      - delayed_on: ${closed_delay}
 
   - platform: analog_threshold
     name: "Valve 2 Closed"
@@ -15,7 +15,7 @@ binary_sensor:
     threshold: ${closed_current}
     internal: true
     filters:
-      - delayed_on: 100ms
+      - delayed_on: ${closed_delay}
 
   - platform: analog_threshold
     name: "Valve 3 Closed"
@@ -24,7 +24,7 @@ binary_sensor:
     threshold: ${closed_current}
     internal: true
     filters:
-      - delayed_on: 100ms
+      - delayed_on: ${closed_delay}
   
   - platform: analog_threshold
     name: "Valve 4 Closed"
@@ -33,7 +33,7 @@ binary_sensor:
     threshold: ${closed_current}
     internal: true
     filters:
-      - delayed_on: 100ms
+      - delayed_on: ${closed_delay}
 
   - platform: analog_threshold
     name: "Valve 5 Closed"
@@ -42,7 +42,7 @@ binary_sensor:
     threshold: ${closed_current}
     internal: true
     filters:
-      - delayed_on: 100ms
+      - delayed_on: ${closed_delay}
 
   - platform: analog_threshold
     name: "Valve 1 Opened"
@@ -51,7 +51,7 @@ binary_sensor:
     threshold: ${opened_current}
     internal: true
     filters:
-      - delayed_on: 100ms
+      - delayed_on: ${opened_delay}
 
   - platform: analog_threshold
     name: "Valve 2 Opened"
@@ -60,7 +60,7 @@ binary_sensor:
     threshold: ${opened_current}
     internal: true
     filters:
-      - delayed_on: 100ms
+      - delayed_on: ${opened_delay}
 
   - platform: analog_threshold
     name: "Valve 3 Opened"
@@ -69,7 +69,7 @@ binary_sensor:
     threshold: ${opened_current}
     internal: true
     filters:
-      - delayed_on: 100ms
+      - delayed_on: ${opened_delay}
 
   - platform: analog_threshold
     name: "Valve 4 Opened"
@@ -78,7 +78,7 @@ binary_sensor:
     threshold: ${opened_current}
     internal: true
     filters:
-      - delayed_on: 100ms  
+      - delayed_on: ${opened_delay}   
 
   - platform: analog_threshold
     name: "Valve 5 Opened"
@@ -87,6 +87,6 @@ binary_sensor:
     threshold: ${opened_current}
     internal: true
     filters:
-      - delayed_on: 100ms
+      - delayed_on: ${opened_delay} 
 
   
