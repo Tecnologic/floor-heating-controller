@@ -1,77 +1,78 @@
-dallas:
-  - pin: 23
-    update_interval: "10s"
+one_wire:
+  - platform: gpio
+    pin: 23
 
 sensor:
-  - platform: dallas
+  - platform: dallas_temp
     address: 0x4d3c01f096631528 # bad
     name: "Bad Rücklauf Temperatur"
     id: "bad_return_temperature_sensor"
     filters:
       - sliding_window_moving_average:
-          window_size: 24
-          send_every: 6
-        
-  - platform: dallas
+          window_size: 8
+          send_every: 2
+                      
+  - platform: dallas_temp
     address: 0x113c01f096208828
     name: "Tessa Rücklauf Temperatur"
     id: "tessa_return_temperature_sensor"
     filters:
       - sliding_window_moving_average:
-          window_size: 24
-          send_every: 6 
-      
-  - platform: dallas
+          window_size: 8
+          send_every: 2
+          
+  - platform: dallas_temp
     address: 0xb03c01f0962a7a28
     name: "Kilian Rücklauf Temperatur"
-    id: "kilian_return_temperature_sensor" 
+    id: "kilian_return_temperature_sensor"
     filters:
       - sliding_window_moving_average:
-          window_size: 24
-          send_every: 6
+          window_size: 8
+          send_every: 2
     
-  - platform: dallas
+  - platform: dallas_temp
     address: 0x113c01f096100a28 # flur
     name: "Flur OG Rücklauf Temperatur"
     id: "flur_og_return_temperature_sensor"
     filters:
       - sliding_window_moving_average:
-          window_size: 24
-          send_every: 6
-      
-  - platform: dallas
+          window_size: 8
+          send_every: 2
+    
+  - platform: dallas_temp
     address: 0x403c01f096080428
     name: "Tessa Raum Temperatur "
     id: "tessa_room_temperature_sensor"
     filters:
       - sliding_window_moving_average:
-          window_size: 24
-          send_every: 6
-    
-  - platform: dallas
+          window_size: 8
+          send_every: 2
+          
+  - platform: dallas_temp
     address: 0xfb062017e9e54228
     name: "Flur OG Raum Temperatur "
     id: "flur_og_room_temperature_sensor"
     filters:
       - sliding_window_moving_average:
-          window_size: 24
-          send_every: 6
-    
-  - platform: dallas
+          window_size: 8
+          send_every: 2
+        
+  - platform: dallas_temp
     address: 0x790121113d299628
     name: "Bad Raum Temperatur "
     id: "bad_room_temperature_sensor"
     filters:
       - sliding_window_moving_average:
-          window_size: 24
-          send_every: 6
-    
-  - platform: dallas
+          window_size: 8
+          send_every: 2
+        
+  - platform: dallas_temp
     address: 0x2001211135154928
     name: "Kilian Raum Temperatur "
     id: "kilian_room_temperature_sensor"
     filters:
       - sliding_window_moving_average:
-          window_size: 24
-          send_every: 6
+          window_size: 8
+          send_every: 2
+
         

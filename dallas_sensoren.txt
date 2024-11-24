@@ -12,9 +12,9 @@ OG
 [22:11:13][D][dallas.sensor:082]:   Found sensors:
 [22:11:13][D][dallas.sensor:084]:     0x113c01f096208828	Kilian
 [22:11:13][D][dallas.sensor:084]:     0x403c01f096080428	Tessa Raum Temp
-[22:11:13][D][dallas.sensor:084]:     0xfb062017e9e54228
+[22:11:13][D][dallas.sensor:084]:     0xfb062017e9e54228    Flur OG Raum Temp
 [22:11:13][D][dallas.sensor:084]:     0x113c01f096100a28	Flur OG
 [22:11:13][D][dallas.sensor:084]:     0xb03c01f0962a7a28	Tessa
-[22:11:13][D][dallas.sensor:084]:     0x790121113d299628
-[22:11:13][D][dallas.sensor:084]:     0x2001211135154928
-[22:11:13][D][dallas.sensor:084]:     0x4d3c01f096631528
+[22:11:13][D][dallas.sensor:084]:     0x790121113d299628    Bad Raum Temp
+[22:11:13][D][dallas.sensor:084]:     0x2001211135154928    Kilian Raum Temp
+[22:11:13][D][dallas.sensor:084]:     0x4d3c01f096631528    Bad
