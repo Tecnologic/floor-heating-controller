@@ -37,8 +37,10 @@ logger:
 api:
   reboot_timeout: 15min
       
+# Example configuration entry
 ota:
-    password: "12345678"    
+  - platform: esphome
+    password: !secret ota_password  
 
 # SN74HC595 I/O Expander (shift register) to control L9110s chips
 sn74hc595:

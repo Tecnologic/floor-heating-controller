@@ -1,9 +1,9 @@
-dallas:
-  - pin: 23
-    update_interval: "30s"
+one_wire:
+  - platform: gpio
+    pin: 23
 
 sensor:
-  - platform: dallas
+  - platform: dallas_temp
     address: 0xe93c01f096575828
     name: "Flur EG Rücklauf Temperatur"
     id: "flur_return_temperature_sensor"
@@ -12,7 +12,7 @@ sensor:
           window_size: 8
           send_every: 2
                       
-  - platform: dallas
+  - platform: dallas_temp
     address: 0xb23c01f0961bf228
     name: "Gäste WC Rücklauf Temperatur"
     id: "wc_eg_return_temperature_sensor"
@@ -21,7 +21,7 @@ sensor:
           window_size: 8
           send_every: 2
           
-  - platform: dallas
+  - platform: dallas_temp
     address: 0xc23c01f096852a28
     name: "WoZi 1 Rücklauf Temperatur"
     id: "wozi1_return_temperature_sensor" 
@@ -30,7 +30,7 @@ sensor:
           window_size: 8
           send_every: 2
     
-  - platform: dallas
+  - platform: dallas_temp
     address: 0x383c01f096148e28
     name: "WoZi 2 Rücklauf Temperatur"
     id: "wozi2_return_temperature_sensor"
@@ -39,7 +39,7 @@ sensor:
           window_size: 8
           send_every: 2
     
-  - platform: dallas
+  - platform: dallas_temp
     address: 0xdd3c01f096519928
     name: "Küche Rücklauf Temperatur"
     id: "kitchen_return_temperature_sensor"
@@ -48,7 +48,7 @@ sensor:
           window_size: 8
           send_every: 2
           
-  - platform: dallas
+  - platform: dallas_temp
     address: 0x5e3c01f0963a5528
     name: "Vorlauf Temperatur"
     id: "heat_temperature_sensor"
@@ -57,7 +57,7 @@ sensor:
           window_size: 8
           send_every: 2
         
-  - platform: dallas
+  - platform: dallas_temp
     address: 0xd73c01f09613e228
     name: "WoZi Raum Temperatur"
     id: "wozi_room_temperature_sensor"
@@ -66,7 +66,7 @@ sensor:
           window_size: 8
           send_every: 2
         
-  - platform: dallas
+  - platform: dallas_temp
     address: 0x25012111d7f84528
     name: "Flur EG Raum Temperatur"
     id: "flur_room_temperature_sensor"
@@ -75,7 +75,7 @@ sensor:
           window_size: 8
           send_every: 2
         
-  - platform: dallas
+  - platform: dallas_temp
     address: 0x72062017ec3b2328
     name: "Gäste WC Raum Temperatur"
     id: "gwc_room_temperature_sensor"
