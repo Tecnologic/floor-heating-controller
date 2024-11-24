@@ -19,7 +19,7 @@ sensor:
     name: ${ch1_cover_name} Current
     id: "ads_current1"
     device_class: current
-    update_interval: 2ms
+    update_interval: 10ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
@@ -35,7 +35,7 @@ sensor:
     name: ${ch2_cover_name} Current
     id: "ads_current2"
     device_class: current
-    update_interval: 2ms
+    update_interval: 10ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
@@ -51,7 +51,7 @@ sensor:
     name: ${ch3_cover_name} Current
     id: "ads_current3"
     device_class: current
-    update_interval: 2ms
+    update_interval: 10ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
@@ -67,7 +67,7 @@ sensor:
     name: ${ch4_cover_name} Current
     id: "ads_current4"
     device_class: current
-    update_interval: 2ms
+    update_interval: 10ms
     unit_of_measurement: "A"
     filters:
       - offset: 0.0
